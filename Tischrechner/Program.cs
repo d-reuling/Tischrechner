@@ -8,6 +8,7 @@ namespace Tischrechner
 {
     static class Program
     {
+        //Nothing
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
