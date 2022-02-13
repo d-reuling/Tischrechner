@@ -14,9 +14,12 @@ namespace Tischrechner
         [STAThread]
         static void Main()
         {
+            Console.WriteLine("PROGRAMM STARTET!");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Tischrechner());
+            Console.WriteLine("PROGRAMM BEENDET!");
+
         }
     }
 }
