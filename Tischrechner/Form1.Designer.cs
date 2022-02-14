@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tischrechner));
             this.LogsPage = new System.Windows.Forms.TabPage();
+            this.Uhrzeitlbl3 = new System.Windows.Forms.Label();
             this.sourcelbl = new System.Windows.Forms.Label();
             this.EasyMdError = new System.Windows.Forms.Label();
             this.bLoadInv = new System.Windows.Forms.Button();
@@ -40,6 +41,29 @@
             this.LogBack = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SettingsPage = new System.Windows.Forms.TabPage();
+            this.rgbBar = new System.Windows.Forms.TrackBar();
+            this.aktfarbe = new System.Windows.Forms.Label();
+            this.rgbBox = new System.Windows.Forms.CheckBox();
+            this.FarbTestBt = new System.Windows.Forms.Button();
+            this.fGrau = new System.Windows.Forms.Label();
+            this.fTurk = new System.Windows.Forms.Label();
+            this.fOrange = new System.Windows.Forms.Label();
+            this.fPink = new System.Windows.Forms.Label();
+            this.fGelb = new System.Windows.Forms.Label();
+            this.fGruen = new System.Windows.Forms.Label();
+            this.fBlau = new System.Windows.Forms.Label();
+            this.fLachs = new System.Windows.Forms.Label();
+            this.hiernichts = new System.Windows.Forms.Label();
+            this.Uhrzeitlbl2 = new System.Windows.Forms.Label();
+            this.ClockOn = new System.Windows.Forms.CheckBox();
+            this.manSavelbl = new System.Windows.Forms.Label();
+            this.manSave = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pathCreate = new System.Windows.Forms.Button();
+            this.FehlerLbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PfadTextBox = new System.Windows.Forms.TextBox();
             this.lastchange = new System.Windows.Forms.Label();
             this.version = new System.Windows.Forms.Label();
             this.AdminClick = new System.Windows.Forms.Label();
@@ -54,6 +78,7 @@
             this.AutoSaveBox = new System.Windows.Forms.CheckBox();
             this.DarkModeBox = new System.Windows.Forms.CheckBox();
             this.RechnerPage = new System.Windows.Forms.TabPage();
+            this.Uhrzeitlbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bNeg = new System.Windows.Forms.Button();
             this.Logs = new System.Windows.Forms.Label();
@@ -85,20 +110,17 @@
             this.Settings = new System.Windows.Forms.Label();
             this.Main = new System.Windows.Forms.TabControl();
             this.Admin = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pathCreate = new System.Windows.Forms.Button();
-            this.FehlerLbl = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PfadTextBox = new System.Windows.Forms.TextBox();
+            this.Uhrzeitlbl4 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.AdSite = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Uhrzeitlbl = new System.Windows.Forms.Label();
+            this.errorclear = new System.Windows.Forms.Timer(this.components);
+            this.rgbTimer = new System.Windows.Forms.Timer(this.components);
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rgbBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.RechnerPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -110,6 +132,7 @@
             // LogsPage
             // 
             this.LogsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.LogsPage.Controls.Add(this.Uhrzeitlbl3);
             this.LogsPage.Controls.Add(this.sourcelbl);
             this.LogsPage.Controls.Add(this.EasyMdError);
             this.LogsPage.Controls.Add(this.bLoadInv);
@@ -122,13 +145,24 @@
             this.LogsPage.Location = new System.Drawing.Point(4, 22);
             this.LogsPage.Name = "LogsPage";
             this.LogsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.LogsPage.Size = new System.Drawing.Size(1150, 627);
+            this.LogsPage.Size = new System.Drawing.Size(1150, 628);
             this.LogsPage.TabIndex = 3;
-            this.LogsPage.Text = "Logs";
+            this.LogsPage.Text = "logs";
+            // 
+            // Uhrzeitlbl3
+            // 
+            this.Uhrzeitlbl3.BackColor = System.Drawing.Color.Transparent;
+            this.Uhrzeitlbl3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Uhrzeitlbl3.ForeColor = System.Drawing.Color.Silver;
+            this.Uhrzeitlbl3.Location = new System.Drawing.Point(3, 596);
+            this.Uhrzeitlbl3.Name = "Uhrzeitlbl3";
+            this.Uhrzeitlbl3.Size = new System.Drawing.Size(94, 28);
+            this.Uhrzeitlbl3.TabIndex = 91;
             // 
             // sourcelbl
             // 
             this.sourcelbl.AutoSize = true;
+            this.sourcelbl.BackColor = System.Drawing.Color.Transparent;
             this.sourcelbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sourcelbl.ForeColor = System.Drawing.Color.Gray;
             this.sourcelbl.Location = new System.Drawing.Point(282, 43);
@@ -140,6 +174,7 @@
             // EasyMdError
             // 
             this.EasyMdError.AutoSize = true;
+            this.EasyMdError.BackColor = System.Drawing.Color.Transparent;
             this.EasyMdError.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EasyMdError.ForeColor = System.Drawing.Color.Silver;
             this.EasyMdError.Location = new System.Drawing.Point(342, 552);
@@ -156,7 +191,7 @@
             this.bLoadInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLoadInv.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLoadInv.ForeColor = System.Drawing.Color.Silver;
-            this.bLoadInv.Location = new System.Drawing.Point(144, 75);
+            this.bLoadInv.Location = new System.Drawing.Point(508, 545);
             this.bLoadInv.Margin = new System.Windows.Forms.Padding(0);
             this.bLoadInv.Name = "bLoadInv";
             this.bLoadInv.Size = new System.Drawing.Size(131, 42);
@@ -184,7 +219,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(1084, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(60, 62);
@@ -195,6 +229,7 @@
             // SettLog
             // 
             this.SettLog.AutoSize = true;
+            this.SettLog.BackColor = System.Drawing.Color.Transparent;
             this.SettLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SettLog.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettLog.ForeColor = System.Drawing.Color.Silver;
@@ -208,6 +243,7 @@
             // LogBack
             // 
             this.LogBack.AutoSize = true;
+            this.LogBack.BackColor = System.Drawing.Color.Transparent;
             this.LogBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogBack.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogBack.ForeColor = System.Drawing.Color.Silver;
@@ -221,6 +257,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label3.Location = new System.Drawing.Point(513, 3);
@@ -232,6 +269,29 @@
             // SettingsPage
             // 
             this.SettingsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.SettingsPage.Controls.Add(this.rgbBar);
+            this.SettingsPage.Controls.Add(this.aktfarbe);
+            this.SettingsPage.Controls.Add(this.rgbBox);
+            this.SettingsPage.Controls.Add(this.FarbTestBt);
+            this.SettingsPage.Controls.Add(this.fGrau);
+            this.SettingsPage.Controls.Add(this.fTurk);
+            this.SettingsPage.Controls.Add(this.fOrange);
+            this.SettingsPage.Controls.Add(this.fPink);
+            this.SettingsPage.Controls.Add(this.fGelb);
+            this.SettingsPage.Controls.Add(this.fGruen);
+            this.SettingsPage.Controls.Add(this.fBlau);
+            this.SettingsPage.Controls.Add(this.fLachs);
+            this.SettingsPage.Controls.Add(this.hiernichts);
+            this.SettingsPage.Controls.Add(this.Uhrzeitlbl2);
+            this.SettingsPage.Controls.Add(this.ClockOn);
+            this.SettingsPage.Controls.Add(this.manSavelbl);
+            this.SettingsPage.Controls.Add(this.manSave);
+            this.SettingsPage.Controls.Add(this.label5);
+            this.SettingsPage.Controls.Add(this.pathCreate);
+            this.SettingsPage.Controls.Add(this.FehlerLbl);
+            this.SettingsPage.Controls.Add(this.label2);
+            this.SettingsPage.Controls.Add(this.label1);
+            this.SettingsPage.Controls.Add(this.PfadTextBox);
             this.SettingsPage.Controls.Add(this.lastchange);
             this.SettingsPage.Controls.Add(this.version);
             this.SettingsPage.Controls.Add(this.AdminClick);
@@ -249,48 +309,360 @@
             this.SettingsPage.Location = new System.Drawing.Point(4, 22);
             this.SettingsPage.Name = "SettingsPage";
             this.SettingsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.SettingsPage.Size = new System.Drawing.Size(1150, 627);
+            this.SettingsPage.Size = new System.Drawing.Size(1150, 628);
             this.SettingsPage.TabIndex = 1;
-            this.SettingsPage.Text = "Settings";
+            this.SettingsPage.Text = "settings";
+            // 
+            // rgbBar
+            // 
+            this.rgbBar.Location = new System.Drawing.Point(160, 455);
+            this.rgbBar.Name = "rgbBar";
+            this.rgbBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rgbBar.Size = new System.Drawing.Size(123, 45);
+            this.rgbBar.TabIndex = 116;
+            this.rgbBar.TickFrequency = 2;
+            this.rgbBar.Value = 10;
+            this.rgbBar.Visible = false;
+            this.rgbBar.Scroll += new System.EventHandler(this.rgbBar_Scroll);
+            // 
+            // aktfarbe
+            // 
+            this.aktfarbe.AutoSize = true;
+            this.aktfarbe.BackColor = System.Drawing.Color.Transparent;
+            this.aktfarbe.Font = new System.Drawing.Font("Calibri", 8.75F);
+            this.aktfarbe.ForeColor = System.Drawing.Color.Gray;
+            this.aktfarbe.Location = new System.Drawing.Point(165, 406);
+            this.aktfarbe.Name = "aktfarbe";
+            this.aktfarbe.Size = new System.Drawing.Size(93, 14);
+            this.aktfarbe.TabIndex = 115;
+            this.aktfarbe.Text = "r:250 g:100 b:250";
+            this.aktfarbe.Visible = false;
+            // 
+            // rgbBox
+            // 
+            this.rgbBox.AutoSize = true;
+            this.rgbBox.BackColor = System.Drawing.Color.Transparent;
+            this.rgbBox.FlatAppearance.BorderSize = 0;
+            this.rgbBox.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rgbBox.ForeColor = System.Drawing.Color.Silver;
+            this.rgbBox.Location = new System.Drawing.Point(167, 427);
+            this.rgbBox.Name = "rgbBox";
+            this.rgbBox.Size = new System.Drawing.Size(119, 33);
+            this.rgbBox.TabIndex = 114;
+            this.rgbBox.Text = "Rainbow";
+            this.rgbBox.UseVisualStyleBackColor = false;
+            this.rgbBox.CheckedChanged += new System.EventHandler(this.rgbBox_CheckedChanged);
+            // 
+            // FarbTestBt
+            // 
+            this.FarbTestBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.FarbTestBt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FarbTestBt.FlatAppearance.BorderSize = 0;
+            this.FarbTestBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FarbTestBt.Font = new System.Drawing.Font("Calibri", 26.25F);
+            this.FarbTestBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.FarbTestBt.Location = new System.Drawing.Point(331, 432);
+            this.FarbTestBt.Margin = new System.Windows.Forms.Padding(0);
+            this.FarbTestBt.Name = "FarbTestBt";
+            this.FarbTestBt.Size = new System.Drawing.Size(54, 53);
+            this.FarbTestBt.TabIndex = 113;
+            this.FarbTestBt.Text = "0";
+            this.FarbTestBt.UseMnemonic = false;
+            this.FarbTestBt.UseVisualStyleBackColor = false;
+            // 
+            // fGrau
+            // 
+            this.fGrau.AutoSize = true;
+            this.fGrau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fGrau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fGrau.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fGrau.ForeColor = System.Drawing.Color.Silver;
+            this.fGrau.Location = new System.Drawing.Point(363, 401);
+            this.fGrau.Name = "fGrau";
+            this.fGrau.Size = new System.Drawing.Size(22, 23);
+            this.fGrau.TabIndex = 112;
+            this.fGrau.Text = "   ";
+            this.fGrau.Click += new System.EventHandler(this.FarbenClick);
+            // 
+            // fTurk
+            // 
+            this.fTurk.AutoSize = true;
+            this.fTurk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fTurk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fTurk.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fTurk.ForeColor = System.Drawing.Color.Silver;
+            this.fTurk.Location = new System.Drawing.Point(279, 401);
+            this.fTurk.Name = "fTurk";
+            this.fTurk.Size = new System.Drawing.Size(22, 23);
+            this.fTurk.TabIndex = 111;
+            this.fTurk.Text = "   ";
+            this.fTurk.Click += new System.EventHandler(this.FarbenClick);
+            // 
+            // fOrange
+            // 
+            this.fOrange.AutoSize = true;
+            this.fOrange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.fOrange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fOrange.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fOrange.ForeColor = System.Drawing.Color.Silver;
+            this.fOrange.Location = new System.Drawing.Point(195, 401);
+            this.fOrange.Name = "fOrange";
+            this.fOrange.Size = new System.Drawing.Size(22, 23);
+            this.fOrange.TabIndex = 110;
+            this.fOrange.Text = "   ";
+            this.fOrange.Click += new System.EventHandler(this.FarbenClick);
+            // 
+            // fPink
+            // 
+            this.fPink.AutoSize = true;
+            this.fPink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.fPink.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fPink.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fPink.ForeColor = System.Drawing.Color.Silver;
+            this.fPink.Location = new System.Drawing.Point(335, 401);
+            this.fPink.Name = "fPink";
+            this.fPink.Size = new System.Drawing.Size(22, 23);
+            this.fPink.TabIndex = 109;
+            this.fPink.Text = "   ";
+            this.fPink.Click += new System.EventHandler(this.FarbenClick);
+            // 
+            // fGelb
+            // 
+            this.fGelb.AutoSize = true;
+            this.fGelb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.fGelb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fGelb.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fGelb.ForeColor = System.Drawing.Color.Silver;
+            this.fGelb.Location = new System.Drawing.Point(223, 401);
+            this.fGelb.Name = "fGelb";
+            this.fGelb.Size = new System.Drawing.Size(22, 23);
+            this.fGelb.TabIndex = 108;
+            this.fGelb.Text = "   ";
+            this.fGelb.Click += new System.EventHandler(this.FarbenClick);
+            // 
+            // fGruen
+            // 
+            this.fGruen.AutoSize = true;
+            this.fGruen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.fGruen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fGruen.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fGruen.ForeColor = System.Drawing.Color.Silver;
+            this.fGruen.Location = new System.Drawing.Point(251, 401);
+            this.fGruen.Name = "fGruen";
+            this.fGruen.Size = new System.Drawing.Size(22, 23);
+            this.fGruen.TabIndex = 107;
+            this.fGruen.Text = "   ";
+            this.fGruen.Click += new System.EventHandler(this.FarbenClick);
+            // 
+            // fBlau
+            // 
+            this.fBlau.AutoSize = true;
+            this.fBlau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.fBlau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fBlau.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fBlau.ForeColor = System.Drawing.Color.Silver;
+            this.fBlau.Location = new System.Drawing.Point(307, 401);
+            this.fBlau.Name = "fBlau";
+            this.fBlau.Size = new System.Drawing.Size(22, 23);
+            this.fBlau.TabIndex = 106;
+            this.fBlau.Text = "   ";
+            this.fBlau.Click += new System.EventHandler(this.FarbenClick);
+            // 
+            // fLachs
+            // 
+            this.fLachs.AutoSize = true;
+            this.fLachs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.fLachs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fLachs.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fLachs.ForeColor = System.Drawing.Color.Silver;
+            this.fLachs.Location = new System.Drawing.Point(167, 401);
+            this.fLachs.Name = "fLachs";
+            this.fLachs.Size = new System.Drawing.Size(22, 23);
+            this.fLachs.TabIndex = 105;
+            this.fLachs.Text = "   ";
+            this.fLachs.Click += new System.EventHandler(this.FarbenClick);
+            // 
+            // hiernichts
+            // 
+            this.hiernichts.AutoSize = true;
+            this.hiernichts.BackColor = System.Drawing.Color.Transparent;
+            this.hiernichts.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hiernichts.ForeColor = System.Drawing.Color.Silver;
+            this.hiernichts.Location = new System.Drawing.Point(161, 366);
+            this.hiernichts.Name = "hiernichts";
+            this.hiernichts.Size = new System.Drawing.Size(225, 29);
+            this.hiernichts.TabIndex = 103;
+            this.hiernichts.Text = "Farbe vom Zahlenfeld";
+            // 
+            // Uhrzeitlbl2
+            // 
+            this.Uhrzeitlbl2.BackColor = System.Drawing.Color.Transparent;
+            this.Uhrzeitlbl2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Uhrzeitlbl2.ForeColor = System.Drawing.Color.Silver;
+            this.Uhrzeitlbl2.Location = new System.Drawing.Point(3, 569);
+            this.Uhrzeitlbl2.Name = "Uhrzeitlbl2";
+            this.Uhrzeitlbl2.Size = new System.Drawing.Size(94, 28);
+            this.Uhrzeitlbl2.TabIndex = 88;
+            // 
+            // ClockOn
+            // 
+            this.ClockOn.AutoSize = true;
+            this.ClockOn.BackColor = System.Drawing.Color.Transparent;
+            this.ClockOn.Checked = true;
+            this.ClockOn.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ClockOn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClockOn.ForeColor = System.Drawing.Color.Silver;
+            this.ClockOn.Location = new System.Drawing.Point(143, 320);
+            this.ClockOn.Name = "ClockOn";
+            this.ClockOn.Size = new System.Drawing.Size(194, 33);
+            this.ClockOn.TabIndex = 87;
+            this.ClockOn.Text = "Uhrzeit anzeigen";
+            this.ClockOn.UseVisualStyleBackColor = false;
+            this.ClockOn.CheckedChanged += new System.EventHandler(this.ClockOn_CheckedChanged);
+            // 
+            // manSavelbl
+            // 
+            this.manSavelbl.AutoSize = true;
+            this.manSavelbl.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manSavelbl.ForeColor = System.Drawing.Color.Green;
+            this.manSavelbl.Location = new System.Drawing.Point(756, 215);
+            this.manSavelbl.Name = "manSavelbl";
+            this.manSavelbl.Size = new System.Drawing.Size(0, 24);
+            this.manSavelbl.TabIndex = 86;
+            // 
+            // manSave
+            // 
+            this.manSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(42)))));
+            this.manSave.FlatAppearance.BorderSize = 0;
+            this.manSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manSave.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manSave.ForeColor = System.Drawing.Color.Silver;
+            this.manSave.Location = new System.Drawing.Point(751, 180);
+            this.manSave.Margin = new System.Windows.Forms.Padding(0);
+            this.manSave.Name = "manSave";
+            this.manSave.Size = new System.Drawing.Size(263, 35);
+            this.manSave.TabIndex = 85;
+            this.manSave.Text = "Manuell speichern";
+            this.manSave.UseMnemonic = false;
+            this.manSave.UseVisualStyleBackColor = false;
+            this.manSave.Visible = false;
+            this.manSave.Click += new System.EventHandler(this.manSave_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label5.Location = new System.Drawing.Point(746, 259);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 29);
+            this.label5.TabIndex = 84;
+            this.label5.Text = "Datei";
+            // 
+            // pathCreate
+            // 
+            this.pathCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(42)))));
+            this.pathCreate.FlatAppearance.BorderSize = 0;
+            this.pathCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pathCreate.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pathCreate.ForeColor = System.Drawing.Color.Silver;
+            this.pathCreate.Location = new System.Drawing.Point(751, 411);
+            this.pathCreate.Margin = new System.Windows.Forms.Padding(0);
+            this.pathCreate.Name = "pathCreate";
+            this.pathCreate.Size = new System.Drawing.Size(263, 35);
+            this.pathCreate.TabIndex = 83;
+            this.pathCreate.Text = "Datei erstellen";
+            this.pathCreate.UseMnemonic = false;
+            this.pathCreate.UseVisualStyleBackColor = false;
+            this.pathCreate.Visible = false;
+            this.pathCreate.Click += new System.EventHandler(this.pathCreate_Click);
+            // 
+            // FehlerLbl
+            // 
+            this.FehlerLbl.AutoSize = true;
+            this.FehlerLbl.Font = new System.Drawing.Font("Calibri", 15F);
+            this.FehlerLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FehlerLbl.Location = new System.Drawing.Point(746, 383);
+            this.FehlerLbl.Name = "FehlerLbl";
+            this.FehlerLbl.Size = new System.Drawing.Size(0, 24);
+            this.FehlerLbl.TabIndex = 82;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(746, 353);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(153, 29);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "Data_[Datum]";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(746, 292);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(278, 29);
+            this.label1.TabIndex = 80;
+            this.label1.Text = "Hier Dateinamen eingeben";
+            // 
+            // PfadTextBox
+            // 
+            this.PfadTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(42)))));
+            this.PfadTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PfadTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.PfadTextBox.Location = new System.Drawing.Point(751, 326);
+            this.PfadTextBox.Name = "PfadTextBox";
+            this.PfadTextBox.Size = new System.Drawing.Size(263, 26);
+            this.PfadTextBox.TabIndex = 79;
+            this.PfadTextBox.TextChanged += new System.EventHandler(this.PfadTextBox_TextChanged);
             // 
             // lastchange
             // 
             this.lastchange.AutoSize = true;
+            this.lastchange.BackColor = System.Drawing.Color.Transparent;
             this.lastchange.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastchange.ForeColor = System.Drawing.Color.Gray;
-            this.lastchange.Location = new System.Drawing.Point(1, 609);
+            this.lastchange.Location = new System.Drawing.Point(1, 612);
             this.lastchange.Name = "lastchange";
             this.lastchange.Size = new System.Drawing.Size(140, 13);
             this.lastchange.TabIndex = 77;
-            this.lastchange.Text = "letzte Änderung: 17.01.2022";
+            this.lastchange.Text = "letzte Änderung: 14.02.2022";
             // 
             // version
             // 
             this.version.AutoSize = true;
+            this.version.BackColor = System.Drawing.Color.Transparent;
             this.version.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.version.ForeColor = System.Drawing.Color.Gray;
-            this.version.Location = new System.Drawing.Point(1, 594);
+            this.version.Location = new System.Drawing.Point(1, 597);
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(157, 15);
             this.version.TabIndex = 76;
-            this.version.Text = "Version 1.0 by Lucas Janzen";
+            this.version.Text = "version 1.1 by Lucas Janzen";
             // 
             // AdminClick
             // 
             this.AdminClick.AutoSize = true;
+            this.AdminClick.BackColor = System.Drawing.Color.Transparent;
             this.AdminClick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdminClick.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminClick.ForeColor = System.Drawing.Color.Silver;
-            this.AdminClick.Location = new System.Drawing.Point(1076, 590);
+            this.AdminClick.Location = new System.Drawing.Point(1023, 591);
             this.AdminClick.Name = "AdminClick";
-            this.AdminClick.Size = new System.Drawing.Size(68, 26);
+            this.AdminClick.Size = new System.Drawing.Size(124, 26);
             this.AdminClick.TabIndex = 71;
-            this.AdminClick.Text = "Admin";
+            this.AdminClick.Text = "Experimental";
             this.AdminClick.Click += new System.EventHandler(this.AdminClick_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1084, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 62);
@@ -301,9 +673,10 @@
             // lblspeichern
             // 
             this.lblspeichern.AutoSize = true;
+            this.lblspeichern.BackColor = System.Drawing.Color.Transparent;
             this.lblspeichern.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblspeichern.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblspeichern.Location = new System.Drawing.Point(138, 313);
+            this.lblspeichern.Location = new System.Drawing.Point(746, 112);
             this.lblspeichern.Name = "lblspeichern";
             this.lblspeichern.Size = new System.Drawing.Size(111, 29);
             this.lblspeichern.TabIndex = 8;
@@ -312,8 +685,10 @@
             // EasyMd
             // 
             this.EasyMd.AutoSize = true;
+            this.EasyMd.BackColor = System.Drawing.Color.Transparent;
             this.EasyMd.Checked = true;
             this.EasyMd.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.EasyMd.FlatAppearance.BorderSize = 0;
             this.EasyMd.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EasyMd.ForeColor = System.Drawing.Color.Silver;
             this.EasyMd.Location = new System.Drawing.Point(143, 144);
@@ -321,12 +696,13 @@
             this.EasyMd.Size = new System.Drawing.Size(199, 33);
             this.EasyMd.TabIndex = 7;
             this.EasyMd.Text = "Einfacher Modus";
-            this.EasyMd.UseVisualStyleBackColor = true;
+            this.EasyMd.UseVisualStyleBackColor = false;
             this.EasyMd.CheckedChanged += new System.EventHandler(this.EasyMd_CheckedChanged);
             // 
             // SetZumRech
             // 
             this.SetZumRech.AutoSize = true;
+            this.SetZumRech.BackColor = System.Drawing.Color.Transparent;
             this.SetZumRech.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SetZumRech.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SetZumRech.ForeColor = System.Drawing.Color.Silver;
@@ -340,6 +716,7 @@
             // SettingsUe
             // 
             this.SettingsUe.AutoSize = true;
+            this.SettingsUe.BackColor = System.Drawing.Color.Transparent;
             this.SettingsUe.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsUe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SettingsUe.Location = new System.Drawing.Point(470, 3);
@@ -351,9 +728,10 @@
             // SettingsDesign
             // 
             this.SettingsDesign.AutoSize = true;
+            this.SettingsDesign.BackColor = System.Drawing.Color.Transparent;
             this.SettingsDesign.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsDesign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.SettingsDesign.Location = new System.Drawing.Point(138, 228);
+            this.SettingsDesign.Location = new System.Drawing.Point(138, 259);
             this.SettingsDesign.Name = "SettingsDesign";
             this.SettingsDesign.Size = new System.Drawing.Size(108, 29);
             this.SettingsDesign.TabIndex = 4;
@@ -362,6 +740,7 @@
             // SettingsFunktion
             // 
             this.SettingsFunktion.AutoSize = true;
+            this.SettingsFunktion.BackColor = System.Drawing.Color.Transparent;
             this.SettingsFunktion.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsFunktion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SettingsFunktion.Location = new System.Drawing.Point(138, 112);
@@ -373,6 +752,7 @@
             // PvS
             // 
             this.PvS.AutoSize = true;
+            this.PvS.BackColor = System.Drawing.Color.Transparent;
             this.PvS.Enabled = false;
             this.PvS.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PvS.ForeColor = System.Drawing.Color.Silver;
@@ -381,37 +761,39 @@
             this.PvS.Size = new System.Drawing.Size(285, 33);
             this.PvS.TabIndex = 2;
             this.PvS.Text = "Punkt vor Strich beachten";
-            this.PvS.UseVisualStyleBackColor = true;
+            this.PvS.UseVisualStyleBackColor = false;
             this.PvS.CheckedChanged += new System.EventHandler(this.PvS_CheckedChanged);
             // 
             // AutoSaveBox
             // 
             this.AutoSaveBox.AutoSize = true;
+            this.AutoSaveBox.BackColor = System.Drawing.Color.Transparent;
             this.AutoSaveBox.Checked = true;
             this.AutoSaveBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AutoSaveBox.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AutoSaveBox.ForeColor = System.Drawing.Color.Silver;
-            this.AutoSaveBox.Location = new System.Drawing.Point(143, 345);
+            this.AutoSaveBox.Location = new System.Drawing.Point(750, 144);
             this.AutoSaveBox.Name = "AutoSaveBox";
             this.AutoSaveBox.Size = new System.Drawing.Size(208, 33);
             this.AutoSaveBox.TabIndex = 1;
             this.AutoSaveBox.Text = "Autom. Speichern";
-            this.AutoSaveBox.UseVisualStyleBackColor = true;
+            this.AutoSaveBox.UseVisualStyleBackColor = false;
+            this.AutoSaveBox.CheckedChanged += new System.EventHandler(this.AutoSaveBox_CheckedChanged);
             // 
             // DarkModeBox
             // 
             this.DarkModeBox.AutoSize = true;
+            this.DarkModeBox.BackColor = System.Drawing.Color.Transparent;
             this.DarkModeBox.Checked = true;
             this.DarkModeBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.DarkModeBox.Enabled = false;
             this.DarkModeBox.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DarkModeBox.ForeColor = System.Drawing.Color.Silver;
-            this.DarkModeBox.Location = new System.Drawing.Point(143, 260);
+            this.DarkModeBox.Location = new System.Drawing.Point(143, 291);
             this.DarkModeBox.Name = "DarkModeBox";
             this.DarkModeBox.Size = new System.Drawing.Size(143, 33);
             this.DarkModeBox.TabIndex = 0;
             this.DarkModeBox.Text = "Dark-Mode";
-            this.DarkModeBox.UseVisualStyleBackColor = true;
+            this.DarkModeBox.UseVisualStyleBackColor = false;
             this.DarkModeBox.CheckedChanged += new System.EventHandler(this.DarkModeBox_CheckedChanged);
             // 
             // RechnerPage
@@ -451,13 +833,22 @@
             this.RechnerPage.Location = new System.Drawing.Point(4, 22);
             this.RechnerPage.Name = "RechnerPage";
             this.RechnerPage.Padding = new System.Windows.Forms.Padding(3);
-            this.RechnerPage.Size = new System.Drawing.Size(1150, 648);
+            this.RechnerPage.Size = new System.Drawing.Size(1150, 628);
             this.RechnerPage.TabIndex = 0;
-            this.RechnerPage.Text = "RechnerPage";
+            this.RechnerPage.Text = "calculator";
+            // 
+            // Uhrzeitlbl
+            // 
+            this.Uhrzeitlbl.BackColor = System.Drawing.Color.Transparent;
+            this.Uhrzeitlbl.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Uhrzeitlbl.ForeColor = System.Drawing.Color.Silver;
+            this.Uhrzeitlbl.Location = new System.Drawing.Point(6, 3);
+            this.Uhrzeitlbl.Name = "Uhrzeitlbl";
+            this.Uhrzeitlbl.Size = new System.Drawing.Size(94, 28);
+            this.Uhrzeitlbl.TabIndex = 70;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1084, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 62);
@@ -485,6 +876,7 @@
             // Logs
             // 
             this.Logs.AutoSize = true;
+            this.Logs.BackColor = System.Drawing.Color.Transparent;
             this.Logs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Logs.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Logs.ForeColor = System.Drawing.Color.Silver;
@@ -497,7 +889,7 @@
             // 
             // CurMode
             // 
-            this.CurMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.CurMode.BackColor = System.Drawing.Color.Transparent;
             this.CurMode.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurMode.ForeColor = System.Drawing.Color.Silver;
             this.CurMode.Location = new System.Drawing.Point(294, 45);
@@ -546,7 +938,7 @@
             // 
             this.Ergebnis2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
             this.Ergebnis2.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ergebnis2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Ergebnis2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Ergebnis2.Location = new System.Drawing.Point(294, 142);
             this.Ergebnis2.Name = "Ergebnis2";
             this.Ergebnis2.Size = new System.Drawing.Size(572, 60);
@@ -593,7 +985,7 @@
             this.bCA.FlatAppearance.BorderSize = 0;
             this.bCA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCA.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bCA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bCA.Location = new System.Drawing.Point(294, 481);
             this.bCA.Margin = new System.Windows.Forms.Padding(0);
             this.bCA.Name = "bCA";
@@ -909,6 +1301,7 @@
             // Settings
             // 
             this.Settings.AutoSize = true;
+            this.Settings.BackColor = System.Drawing.Color.Transparent;
             this.Settings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Settings.ForeColor = System.Drawing.Color.Silver;
@@ -925,24 +1318,19 @@
             this.Main.Controls.Add(this.SettingsPage);
             this.Main.Controls.Add(this.LogsPage);
             this.Main.Controls.Add(this.Admin);
-            this.Main.Location = new System.Drawing.Point(-5, -23);
+            this.Main.Location = new System.Drawing.Point(-5, -3);
             this.Main.Margin = new System.Windows.Forms.Padding(0);
             this.Main.Multiline = true;
             this.Main.Name = "Main";
             this.Main.Padding = new System.Drawing.Point(0, 0);
             this.Main.SelectedIndex = 0;
-            this.Main.Size = new System.Drawing.Size(1158, 674);
+            this.Main.Size = new System.Drawing.Size(1158, 654);
             this.Main.TabIndex = 0;
             // 
             // Admin
             // 
             this.Admin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
-            this.Admin.Controls.Add(this.label5);
-            this.Admin.Controls.Add(this.pathCreate);
-            this.Admin.Controls.Add(this.FehlerLbl);
-            this.Admin.Controls.Add(this.label2);
-            this.Admin.Controls.Add(this.label1);
-            this.Admin.Controls.Add(this.PfadTextBox);
+            this.Admin.Controls.Add(this.Uhrzeitlbl4);
             this.Admin.Controls.Add(this.pictureBox4);
             this.Admin.Controls.Add(this.label4);
             this.Admin.Controls.Add(this.AdSite);
@@ -950,85 +1338,22 @@
             this.Admin.Location = new System.Drawing.Point(4, 22);
             this.Admin.Name = "Admin";
             this.Admin.Padding = new System.Windows.Forms.Padding(3);
-            this.Admin.Size = new System.Drawing.Size(1150, 627);
+            this.Admin.Size = new System.Drawing.Size(1150, 628);
             this.Admin.TabIndex = 4;
-            this.Admin.Text = "Admin";
+            this.Admin.Text = "experimental";
             // 
-            // label5
+            // Uhrzeitlbl4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(463, 187);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 33);
-            this.label5.TabIndex = 78;
-            this.label5.Text = "Datei";
-            // 
-            // pathCreate
-            // 
-            this.pathCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(42)))));
-            this.pathCreate.FlatAppearance.BorderSize = 0;
-            this.pathCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pathCreate.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pathCreate.ForeColor = System.Drawing.Color.Silver;
-            this.pathCreate.Location = new System.Drawing.Point(469, 387);
-            this.pathCreate.Margin = new System.Windows.Forms.Padding(0);
-            this.pathCreate.Name = "pathCreate";
-            this.pathCreate.Size = new System.Drawing.Size(244, 39);
-            this.pathCreate.TabIndex = 77;
-            this.pathCreate.Text = "Datei erstellen";
-            this.pathCreate.UseMnemonic = false;
-            this.pathCreate.UseVisualStyleBackColor = false;
-            this.pathCreate.Visible = false;
-            this.pathCreate.Click += new System.EventHandler(this.pathCreate_Click);
-            // 
-            // FehlerLbl
-            // 
-            this.FehlerLbl.AutoSize = true;
-            this.FehlerLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FehlerLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.FehlerLbl.Location = new System.Drawing.Point(464, 346);
-            this.FehlerLbl.Name = "FehlerLbl";
-            this.FehlerLbl.Size = new System.Drawing.Size(0, 29);
-            this.FehlerLbl.TabIndex = 76;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(464, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 29);
-            this.label2.TabIndex = 75;
-            this.label2.Text = "Data_[Datum]";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(464, 220);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 29);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "Hier Dateinamen eingeben";
-            // 
-            // PfadTextBox
-            // 
-            this.PfadTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(42)))));
-            this.PfadTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PfadTextBox.ForeColor = System.Drawing.Color.Silver;
-            this.PfadTextBox.Location = new System.Drawing.Point(469, 286);
-            this.PfadTextBox.Name = "PfadTextBox";
-            this.PfadTextBox.Size = new System.Drawing.Size(244, 26);
-            this.PfadTextBox.TabIndex = 71;
-            this.PfadTextBox.TextChanged += new System.EventHandler(this.PfadTextBox_TextChanged);
+            this.Uhrzeitlbl4.BackColor = System.Drawing.Color.Transparent;
+            this.Uhrzeitlbl4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Uhrzeitlbl4.ForeColor = System.Drawing.Color.Silver;
+            this.Uhrzeitlbl4.Location = new System.Drawing.Point(3, 596);
+            this.Uhrzeitlbl4.Name = "Uhrzeitlbl4";
+            this.Uhrzeitlbl4.Size = new System.Drawing.Size(94, 28);
+            this.Uhrzeitlbl4.TabIndex = 91;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(1084, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(60, 62);
@@ -1054,11 +1379,11 @@
             this.AdSite.AutoSize = true;
             this.AdSite.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdSite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdSite.Location = new System.Drawing.Point(513, 3);
+            this.AdSite.Location = new System.Drawing.Point(467, 0);
             this.AdSite.Name = "AdSite";
-            this.AdSite.Size = new System.Drawing.Size(117, 45);
+            this.AdSite.Size = new System.Drawing.Size(217, 45);
             this.AdSite.TabIndex = 5;
-            this.AdSite.Text = "Admin";
+            this.AdSite.Text = "Experimental";
             // 
             // timer1
             // 
@@ -1066,15 +1391,14 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Uhrzeitlbl
+            // errorclear
             // 
-            this.Uhrzeitlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
-            this.Uhrzeitlbl.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Uhrzeitlbl.ForeColor = System.Drawing.Color.Silver;
-            this.Uhrzeitlbl.Location = new System.Drawing.Point(6, 3);
-            this.Uhrzeitlbl.Name = "Uhrzeitlbl";
-            this.Uhrzeitlbl.Size = new System.Drawing.Size(225, 28);
-            this.Uhrzeitlbl.TabIndex = 70;
+            this.errorclear.Interval = 4000;
+            this.errorclear.Tick += new System.EventHandler(this.errorclear_Tick);
+            // 
+            // rgbTimer
+            // 
+            this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
             // 
             // Tischrechner
             // 
@@ -1083,15 +1407,18 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1148, 645);
             this.Controls.Add(this.Main);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Tischrechner";
-            this.Text = "Tischrechner";
+            this.Text = "Tischrechner Janzen";
             this.Load += new System.EventHandler(this.Tischrechner_Load);
             this.LogsPage.ResumeLayout(false);
             this.LogsPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.SettingsPage.ResumeLayout(false);
             this.SettingsPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rgbBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.RechnerPage.ResumeLayout(false);
             this.RechnerPage.PerformLayout();
@@ -1161,17 +1488,38 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label AdSite;
         private System.Windows.Forms.Label AdminClick;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox PfadTextBox;
-        private System.Windows.Forms.Label FehlerLbl;
-        private System.Windows.Forms.Button pathCreate;
         private System.Windows.Forms.Label sourcelbl;
         private System.Windows.Forms.Label lastchange;
         private System.Windows.Forms.Label version;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label Uhrzeitlbl;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button pathCreate;
+        private System.Windows.Forms.Label FehlerLbl;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox PfadTextBox;
+        private System.Windows.Forms.Label manSavelbl;
+        private System.Windows.Forms.Button manSave;
+        private System.Windows.Forms.Timer errorclear;
+        private System.Windows.Forms.CheckBox ClockOn;
+        private System.Windows.Forms.Label Uhrzeitlbl3;
+        private System.Windows.Forms.Label Uhrzeitlbl2;
+        private System.Windows.Forms.Label Uhrzeitlbl4;
+        private System.Windows.Forms.Timer rgbTimer;
+        private System.Windows.Forms.CheckBox rgbBox;
+        private System.Windows.Forms.Button FarbTestBt;
+        private System.Windows.Forms.Label fGrau;
+        private System.Windows.Forms.Label fTurk;
+        private System.Windows.Forms.Label fOrange;
+        private System.Windows.Forms.Label fPink;
+        private System.Windows.Forms.Label fGelb;
+        private System.Windows.Forms.Label fGruen;
+        private System.Windows.Forms.Label fBlau;
+        private System.Windows.Forms.Label fLachs;
+        private System.Windows.Forms.Label hiernichts;
+        private System.Windows.Forms.Label aktfarbe;
+        private System.Windows.Forms.TrackBar rgbBar;
     }
 }
 

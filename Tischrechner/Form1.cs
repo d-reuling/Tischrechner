@@ -1,27 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tischrechner
 {
     public partial class Tischrechner : Form
-
-        //zum testen
     {
         Rechnung Re = new Rechnung(); //Rechnungsklasse implementieren
+
         bool AnsUsed = false; //Ans genutzt?
         bool Negierung = false; //Negierung genutzt?
-        string Pfad = "Data_" + DateTime.Now.ToShortDateString();
+        string Pfad = "Data_" + DateTime.Now.ToShortDateString(); //Dateiname generieren (Data_[Datum].csv). Variable, weil im Programm änderbar
 
         string zwspeicher;
+        bool juststarted = true; //um Speicherfehler zu vermeiden
 
+        int r = 240;
+        int g = 100; //für rgb (spielerei)
+        int b = 240;
+        int wo = 0;
 
         public Tischrechner()
         {
@@ -30,7 +29,7 @@ namespace Tischrechner
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            if(sender == Settings || sender == SettLog)
+            if (sender == Settings || sender == SettLog)
                 Main.SelectedIndex = 1;
             if (sender == Logs)
                 Main.SelectedIndex = 2;
@@ -39,7 +38,6 @@ namespace Tischrechner
         {
             Main.SelectedIndex = 0;
         }
-
         private void bZahlenfeld_Click(object sender, EventArgs e)
         {
 
@@ -48,91 +46,91 @@ namespace Tischrechner
             //
 
             if (sender == b1)
-                {
-                    Re.CurDigit = Re.CurDigit + "1";
-                    Re.CurInvoice = Re.CurInvoice + "1";
+            {
+                Re.CurDigit = Re.CurDigit + "1";
+                Re.CurInvoice = Re.CurInvoice + "1";
                 Re.CurInv.AddLast("1");
                 if (!EasyMd.Checked)
                     Re.CurOperator = null; //Wenn eine Zahl eingegeben wurde, kann wieder ein neuer Operator verwendet werden. (Doppelte Operatoren vermieden)
-                }
+            }
             if (sender == b2)
-                {
-                    Re.CurDigit = Re.CurDigit + "2";
-                    Re.CurInvoice = Re.CurInvoice + "2";
+            {
+                Re.CurDigit = Re.CurDigit + "2";
+                Re.CurInvoice = Re.CurInvoice + "2";
                 Re.CurInv.AddLast("2");
                 if (!EasyMd.Checked)
                     Re.CurOperator = null;
             }
             if (sender == b3)
-                {
-                    Re.CurDigit = Re.CurDigit + "3";
-                    Re.CurInvoice = Re.CurInvoice + "3";
+            {
+                Re.CurDigit = Re.CurDigit + "3";
+                Re.CurInvoice = Re.CurInvoice + "3";
                 Re.CurInv.AddLast("3");
                 if (!EasyMd.Checked)
                     Re.CurOperator = null;
             }
             if (sender == b4)
-                {
-                    Re.CurDigit = Re.CurDigit + "4";
-                    Re.CurInvoice = Re.CurInvoice + "4";
+            {
+                Re.CurDigit = Re.CurDigit + "4";
+                Re.CurInvoice = Re.CurInvoice + "4";
                 Re.CurInv.AddLast("4");
                 if (!EasyMd.Checked)
                     Re.CurOperator = null;
             }
             if (sender == b5)
-                {
-                    Re.CurDigit = Re.CurDigit + "5";
-                    Re.CurInvoice = Re.CurInvoice + "5";
+            {
+                Re.CurDigit = Re.CurDigit + "5";
+                Re.CurInvoice = Re.CurInvoice + "5";
                 Re.CurInv.AddLast("5");
                 if (!EasyMd.Checked)
                     Re.CurOperator = null;
             }
             if (sender == b6)
-                {
-                    Re.CurDigit = Re.CurDigit + "6";
-                    Re.CurInvoice = Re.CurInvoice + "6";
+            {
+                Re.CurDigit = Re.CurDigit + "6";
+                Re.CurInvoice = Re.CurInvoice + "6";
                 Re.CurInv.AddLast("6");
                 if (!EasyMd.Checked)
                     Re.CurOperator = null;
             }
             if (sender == b7)
-                {
-                    Re.CurDigit = Re.CurDigit + "7";
-                    Re.CurInvoice = Re.CurInvoice + "7";
+            {
+                Re.CurDigit = Re.CurDigit + "7";
+                Re.CurInvoice = Re.CurInvoice + "7";
                 Re.CurInv.AddLast("7");
                 if (!EasyMd.Checked)
                     Re.CurOperator = null;
             }
             if (sender == b8)
-                {
-                    Re.CurDigit = Re.CurDigit + "8";
-                    Re.CurInvoice = Re.CurInvoice + "8";
+            {
+                Re.CurDigit = Re.CurDigit + "8";
+                Re.CurInvoice = Re.CurInvoice + "8";
                 Re.CurInv.AddLast("8");
                 if (!EasyMd.Checked)
                     Re.CurOperator = null;
             }
             if (sender == b9)
-                {
-                    Re.CurDigit = Re.CurDigit + "9";
-                    Re.CurInvoice = Re.CurInvoice + "9";
+            {
+                Re.CurDigit = Re.CurDigit + "9";
+                Re.CurInvoice = Re.CurInvoice + "9";
                 Re.CurInv.AddLast("9");
                 if (!EasyMd.Checked)
                     Re.CurOperator = null;
             }
             if (sender == b0)
+            {
+                if (Re.CurDigit != "0" && Re.CurDigit != null && Re.CurDigit != "") //Wenn die aktuelle Zahl nicht 0 ist, dann kann eine weitere Null hinzugefügt werden
                 {
-                    if (Re.CurDigit != "0" && Re.CurDigit != null && Re.CurDigit != "") //Wenn die aktuelle Zahl nicht 0 ist, dann kann eine weitere Null hinzugefügt werden
-                    {
-                        Re.CurDigit = Re.CurDigit + "0";
-                        Re.CurInvoice = Re.CurInvoice + "0";
-                        Re.CurInv.AddLast("0");
-                        if (!EasyMd.Checked)
-                            Re.CurOperator = null;
-                    }
+                    Re.CurDigit = Re.CurDigit + "0";
+                    Re.CurInvoice = Re.CurInvoice + "0";
+                    Re.CurInv.AddLast("0");
+                    if (!EasyMd.Checked)
+                        Re.CurOperator = null;
                 }
+            }
             if (sender == b00)
-                {
-                if (Re.CurDigit != "0" && Re.CurDigit != null && Re.CurDigit != "") 
+            {
+                if (Re.CurDigit != "0" && Re.CurDigit != null && Re.CurDigit != "")
                 {
                     Re.CurDigit = Re.CurDigit + "00";
                     Re.CurInvoice = Re.CurInvoice + "00";
@@ -142,24 +140,24 @@ namespace Tischrechner
                 }
             }
             if (sender == bPunkt)
-                    {
-                    if(Re.CurDigit == null)
-                    {
+            {
+                if (Re.CurDigit == null)
+                {
                     Re.CurDigit = Re.CurDigit + "0,";
                     Re.CurInvoice = Re.CurInvoice + "0,";
                     Re.CurInv.AddLast("0,");
                     if (!EasyMd.Checked)
                         Re.CurOperator = null;
-                    }
-                    else if (!Re.CurDigit.Contains(","))
-                    {
-                        Re.CurDigit = Re.CurDigit + ",";
-                        Re.CurInvoice = Re.CurInvoice + ",";
+                }
+                else if (!Re.CurDigit.Contains(","))
+                {
+                    Re.CurDigit = Re.CurDigit + ",";
+                    Re.CurInvoice = Re.CurInvoice + ",";
                     Re.CurInv.AddLast(",");
                     if (!EasyMd.Checked)
                         Re.CurOperator = null;
-                    }
                 }
+            }
 
             //
             //OPERATOREN
@@ -240,7 +238,7 @@ namespace Tischrechner
             {
                 if (Re.CurOperator == null && Re.CurDigit != null)
                 {
-                    if (EasyMd.Checked) 
+                    if (EasyMd.Checked)
                         Ergebnis2.Text = "";
                     Re.CurOperator = "÷";
                     Re.CurInvoice = Re.CurInvoice + " ÷ ";
@@ -265,11 +263,10 @@ namespace Tischrechner
             //EXTRATASTEN
             //
 
-            if(sender == bAns)
+            if (sender == bAns)
             {
                 if (Re.AnsWert != null && AnsUsed == false) //wenn Ans nicht null ist und Die Ans noch nicht in dieser Zahl genutzt wurde
                 {
-                    Clear();
                     Re.CurDigit = Re.CurDigit + Re.AnsWert; //Ans wird einfach dran gehangen.
                     Re.CurInvoice = Re.CurInvoice + Re.AnsWert;
                     Re.CurInv.AddLast(Re.AnsWert);
@@ -278,7 +275,7 @@ namespace Tischrechner
                         Re.CurOperator = null;
                 }
             }
-            if(sender == bProz)
+            if (sender == bProz)
             { //im Grunde das selbe wie jeder anderer Operator
                 if (Re.CurOperator == null && Re.CurDigit != null)
                 {
@@ -289,11 +286,11 @@ namespace Tischrechner
                     Negierung = false;
                 }
             }
-            if(sender == bNeg)
+            if (sender == bNeg)
             {
                 try
                 {
-                    if (Re.CurInv.Last() != " + " && Re.CurInv.Last() !=  " - " && Re.CurInv.Last() != " x " && Re.CurInv.Last() != " ÷ " && Re.CurInv.Last() != " % ")
+                    if (Re.CurInv.Last() != " + " && Re.CurInv.Last() != " - " && Re.CurInv.Last() != " x " && Re.CurInv.Last() != " ÷ " && Re.CurInv.Last() != " % ")
                     {
                         if (!Negierung) //wenn Negation nicht angewandt ist, dann mach ein - vor die Zahl
                         {
@@ -318,7 +315,7 @@ namespace Tischrechner
 
             if (sender == bBack)
             {
-                if(Re.CurInv.Count()!=0)
+                if (Re.CurInv.Count() != 0)
                     Re.CurInv.RemoveLast();
                 //letztes Item aus Liste entfernen, wenn da überhaupt noch was drin ist
 
@@ -331,7 +328,7 @@ namespace Tischrechner
             {
                 ClearLast();
             }
-            AnzeigeRefresh();
+            DisplayRefresh();
             if (sender == bErg)
             {
                 if (EasyMd.Checked)
@@ -342,25 +339,25 @@ namespace Tischrechner
                 else
                 if (!PvS.Checked)
                 {
-                    Ergebnis2.Text = Re.OhnePvS(Re.CurInvoice); 
+                    Ergebnis2.Text = Re.OhnePvS(Re.CurInvoice);
                     Re.SaveData.AddLast(Re.CurInvoice + " = " + Ergebnis2.Text);
                     if (AutoSaveBox.Checked && Ergebnis2.Text != "" && Ergebnis2.Text != null)
                     {
-                        Speichern();
-                        Rechnungen.Items.Add(Re.CurInvoice + " = " + Ergebnis2.Text);
+                        Save();
+                        Rechnungen.Items.Add(Re.CurInvoice + "= " + Ergebnis2.Text);
                     }
                     Re.CurInvoice = null;
                     Re.CurInv.Clear();
                     Re.CurDigit = null;
 
                 }
-                else if(PvS.Checked)
+                else if (PvS.Checked)
                 {
                     Ergebnis2.Text = Re.PvS(Re.CurInvoice);
                     Re.SaveData.AddLast(Re.CurInvoice + " = " + Ergebnis2.Text);
                     if (AutoSaveBox.Checked && Ergebnis2.Text != "" && Ergebnis2.Text != null)
                     {
-                        Speichern();
+                        Save();
                         Rechnungen.Items.Add(Re.CurInvoice + " = " + Ergebnis2.Text);
                     }
                     Re.CurInvoice = null;
@@ -368,22 +365,22 @@ namespace Tischrechner
                     Re.CurDigit = null;
                 }
 
-                
+
 
             }
         }
 
-
         //
-        //KLEINIGKEITEN (Spielereien für Einstellungen und so)
+        //SPIELEREIEN
         //
 
         private void Tischrechner_Load(object sender, EventArgs e)
         {
             Clear();
-            Laden();
+            LoadSave();
             PfadTextBox.Text = Pfad;
             sourcelbl.Text = "Quelle: " + Pfad;
+            juststarted = false;
         }
         private void EasyMd_CheckedChanged(object sender, EventArgs e)
         {
@@ -396,10 +393,11 @@ namespace Tischrechner
                 bAns.Visible = false;
                 bProz.Visible = false;
                 bNeg.Visible = false;
-                
+
 
                 CurMode.Text = "Einfacher Modus";
-            }else if (!EasyMd.Checked)
+            }
+            else if (!EasyMd.Checked)
             {
                 PvS.Enabled = true;
                 bBack.Visible = true;
@@ -422,14 +420,20 @@ namespace Tischrechner
         }
         private void Rechnungen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(Rechnungen.SelectedItem != null && !EasyMd.Checked)
+            if (Rechnungen.SelectedItem != null && !EasyMd.Checked)
                 bLoadInv.Visible = true;
             else if (Rechnungen.SelectedItem == null && !EasyMd.Checked)
                 bLoadInv.Visible = false;
             if (EasyMd.Checked)
+            {
                 EasyMdError.Visible = true;
+                bLoadInv.Visible = false;
+            }
             else
+            {
                 EasyMdError.Visible = false;
+                bLoadInv.Visible = true;
+            }
         }
         private void bLoadInv_Click(object sender, EventArgs e)
         {
@@ -439,37 +443,283 @@ namespace Tischrechner
 
             foreach (string s in Load)
             {
-                if (s == "=") //Bei = ist die Rechnung zu ende. Also raus aus der Foreach
-                    break;
+                if (s.Contains('=')) //Bei = ist die Rechnung zu ende. Also letzte " " zeichen entfernen und raus aus der foreach.
+                {
+                    if (s == "=")
+                    {
+                        Re.CurInvoice = Re.CurInvoice.Remove(Re.CurInvoice.Count() - 1, 1); //letztes " " zeichen aus der Rechnung löschen
+                        string sd = Re.CurInv.Last(); //Last zwischenspeichern
+                        Re.CurInv.RemoveLast(); //und entfernen
+                        Re.CurInv.AddLast(sd.Remove(sd.Count() - 1, 1)); //letztes " " aus Inv Liste löschen
+                    }
+                    break; //foreach break, weil das Ergebnis nicht benötigt wird       
+                }
                 Re.CurInv.AddLast(s + " "); //Rechnung übernehmen aus Array
                 Re.CurInvoice = Re.CurInvoice + s + " ";
                 Re.CurDigit = s;
             }
-            AnzeigeRefresh();
-            
+            DisplayRefresh();
+            Main.SelectedIndex = 0;
         }
         private void DarkModeBox_CheckedChanged(object sender, EventArgs e)
         {
-            //Würde für alle Elemente jetzt zu lange dauern 
+            //Darkmode
+            Color DMBack = Color.FromArgb(42, 42, 46);
+            Color DMFront = Color.FromArgb(32, 32, 36);
+            Color DMText = Color.FromArgb(192, 192, 192);
+            Color DMTitle = Color.FromArgb(224, 224, 224);
+            Color DMMenuBt = Color.FromArgb(38, 38, 42);
+
+            //Whitemode
+            Color WMBack = Color.FromArgb(245, 245, 255);
+            Color WMFront = Color.FromArgb(230, 230, 245);
+            Color WMText = Color.FromArgb(63, 63, 63);
+            Color WMTitle = Color.FromArgb(31, 31, 31);
+            Color WMMenuBt = Color.FromArgb(235, 235, 245);
+
+
             if (DarkModeBox.Checked)
             {
-                SettingsPage.BackColor = Color.FromArgb(42, 42, 46);
+                RechnerPage.BackColor = SettingsPage.BackColor = LogsPage.BackColor = Admin.BackColor = DMBack;
+                Ergebnis.BackColor = Ergebnis2.BackColor = b1.BackColor = b2.BackColor = b3.BackColor = b4.BackColor = b5.BackColor = b6.BackColor = b7.BackColor = b8.BackColor = b9.BackColor = b0.BackColor = b00.BackColor = bPunkt.BackColor = FarbTestBt.BackColor = Ergebnis2.BackColor = bNeg.BackColor = bBack.BackColor = bC.BackColor = bCA.BackColor = bAns.BackColor = bProz.BackColor = bMal.BackColor = bPlus.BackColor = bMinus.BackColor = bGeteilt.BackColor = bErg.BackColor = DMFront;
+                manSave.ForeColor = pathCreate.ForeColor = PfadTextBox.ForeColor = bLoadInv.ForeColor = Ergebnis.ForeColor = Ergebnis2.ForeColor = bNeg.ForeColor = bBack.ForeColor = bC.ForeColor = bAns.ForeColor = bProz.ForeColor = bPlus.ForeColor = bMinus.ForeColor = bMal.ForeColor = bGeteilt.ForeColor = bErg.ForeColor = Logs.ForeColor = Settings.ForeColor = Uhrzeitlbl.ForeColor = Uhrzeitlbl2.ForeColor = Uhrzeitlbl3.ForeColor = Uhrzeitlbl4.ForeColor = CurMode.ForeColor = AdminClick.ForeColor = SetZumRech.ForeColor = EasyMd.ForeColor = PvS.ForeColor = DarkModeBox.ForeColor = ClockOn.ForeColor = hiernichts.ForeColor = rgbBox.ForeColor = label1.ForeColor = AutoSaveBox.ForeColor = EasyMdError.ForeColor = LogBack.ForeColor = Rechnungen.ForeColor = SettLog.ForeColor = label4.ForeColor = DMText;
+                SettingsUe.ForeColor = SettingsFunktion.ForeColor = SettingsDesign.ForeColor = label5.ForeColor = lblspeichern.ForeColor = label3.ForeColor = AdSite.ForeColor = DMTitle;
+                PfadTextBox.BackColor = Rechnungen.BackColor = pathCreate.BackColor = manSave.BackColor = bLoadInv.BackColor = DMMenuBt;
+
+
             }
             else
             {
-                SettingsPage.BackColor = Color.FromArgb(255, 255, 255);
+                RechnerPage.BackColor = SettingsPage.BackColor = LogsPage.BackColor = Admin.BackColor = WMBack;
+                Ergebnis.BackColor = Ergebnis2.BackColor = b1.BackColor = b2.BackColor = b3.BackColor = b4.BackColor = b5.BackColor = b6.BackColor = b7.BackColor = b8.BackColor = b9.BackColor = b0.BackColor = b00.BackColor = bPunkt.BackColor = FarbTestBt.BackColor = Ergebnis2.BackColor = bNeg.BackColor = bBack.BackColor = bC.BackColor = bCA.BackColor = bAns.BackColor = bProz.BackColor = bMal.BackColor = bPlus.BackColor = bMinus.BackColor = bGeteilt.BackColor = bErg.BackColor = WMFront;
+                manSave.ForeColor = pathCreate.ForeColor = PfadTextBox.ForeColor = bLoadInv.ForeColor = Ergebnis.ForeColor = Ergebnis2.ForeColor = bNeg.ForeColor = bBack.ForeColor = bC.ForeColor = bAns.ForeColor = bProz.ForeColor = bPlus.ForeColor = bMinus.ForeColor = bMal.ForeColor = bGeteilt.ForeColor = bErg.ForeColor = Logs.ForeColor = Settings.ForeColor = Uhrzeitlbl.ForeColor = Uhrzeitlbl2.ForeColor = Uhrzeitlbl3.ForeColor = Uhrzeitlbl4.ForeColor = CurMode.ForeColor = AdminClick.ForeColor = SetZumRech.ForeColor = EasyMd.ForeColor = PvS.ForeColor = DarkModeBox.ForeColor = ClockOn.ForeColor = hiernichts.ForeColor = rgbBox.ForeColor = label1.ForeColor = AutoSaveBox.ForeColor = EasyMdError.ForeColor = LogBack.ForeColor = Rechnungen.ForeColor = SettLog.ForeColor = label4.ForeColor = WMText;
+                SettingsUe.ForeColor = SettingsFunktion.ForeColor = SettingsDesign.ForeColor = label5.ForeColor = lblspeichern.ForeColor = label3.ForeColor = AdSite.ForeColor = WMTitle;
+                PfadTextBox.BackColor = Rechnungen.BackColor = pathCreate.BackColor = manSave.BackColor = bLoadInv.BackColor = WMMenuBt;
+
+
             }
         }
         private void AdminClick_Click(object sender, EventArgs e)
         {
             Main.SelectedIndex = 3;
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            string aktzeit = DateTime.Now.ToString("HH:mm:ss");
+            Uhrzeitlbl.Text = aktzeit;
+            Uhrzeitlbl2.Text = aktzeit;
+            Uhrzeitlbl3.Text = aktzeit;
+            Uhrzeitlbl4.Text = aktzeit;
+        }
+        private void AutoSaveBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AutoSaveBox.Checked)
+            {
+                manSave.Visible = false;
+                manSavelbl.Text = "";
+            }
+            else
+                manSave.Visible = true;
+        }
+        private void manSave_Click(object sender, EventArgs e)
+        {
+            Save();
+            manSavelbl.Text = "Erfolgreich gespeichert!";
+            errorclear.Enabled = true;
+        }
+        private void errorclear_Tick(object sender, EventArgs e)
+        {
+            manSavelbl.Text = "";
+            errorclear.Enabled = false;
+        }
+        private void ClockOn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!ClockOn.Checked)
+            {
+                Uhrzeitlbl.Visible = false;
+                Uhrzeitlbl2.Visible = false;
+                Uhrzeitlbl3.Visible = false;
+                Uhrzeitlbl4.Visible = false;
+
+                timer1.Enabled = false;
+            }
+            else
+            {
+                Uhrzeitlbl.Visible = true;
+                Uhrzeitlbl2.Visible = true;
+                Uhrzeitlbl3.Visible = true;
+                Uhrzeitlbl4.Visible = true;
+                timer1_Tick(ClockOn, e);
+
+                timer1.Enabled = true;
+            }
+        }
+        private void FarbenClick(object sender, EventArgs e)
+        {
+            Color cl = Color.FromArgb(255, 128, 128);
+            Color cl2 = Color.FromArgb(128, 64, 64);
+            if (sender == fLachs)
+            {
+                cl = Color.FromArgb(255, 128, 128);
+                cl2 = Color.FromArgb(128, 64, 64);
+            }
+            else if (sender == fOrange)
+            {
+                cl = Color.FromArgb(255, 192, 128);
+                cl2 = Color.FromArgb(128, 96, 64);
+            }
+            else if (sender == fGelb)
+            {
+                cl = Color.FromArgb(255, 255, 128);
+                cl2 = Color.FromArgb(128, 128, 64);
+            }
+            else if (sender == fGruen)
+            {
+                cl = Color.FromArgb(128, 255, 128);
+                cl2 = Color.FromArgb(64, 128, 64);
+            }
+            else if (sender == fTurk)
+            {
+                cl = Color.FromArgb(128, 255, 255);
+                cl2 = Color.FromArgb(64, 128, 128);
+            }
+            else if (sender == fBlau)
+            {
+                cl = Color.FromArgb(128, 128, 255);
+                cl2 = Color.FromArgb(64, 64, 128);
+            }
+            else if (sender == fPink)
+            {
+                cl = Color.FromArgb(255, 128, 255);
+                cl2 = Color.FromArgb(128, 64, 128);
+            }
+            else if (sender == fGrau)
+            {
+                cl = Color.FromArgb(224, 224, 224);
+                cl2 = Color.FromArgb(112, 112, 112);
+
+                if (!DarkModeBox.Checked)
+                {
+                    cl = Color.FromArgb(31, 31, 31);
+                    cl2 = Color.FromArgb(15, 15, 15);
+                }
+            }
+            b1.ForeColor = b2.ForeColor = b3.ForeColor = b4.ForeColor = b5.ForeColor = b6.ForeColor = b7.ForeColor = b8.ForeColor = b9.ForeColor = b0.ForeColor = b00.ForeColor = bPunkt.ForeColor = FarbTestBt.ForeColor = Ergebnis2.ForeColor = cl;
+            bCA.ForeColor = cl2;
+
+
+        }
+        private void rgbBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rgbBox.Checked)
+            {
+                fLachs.Visible = false;
+                fOrange.Visible = false;
+                fGelb.Visible = false;
+                fGruen.Visible = false;
+                fTurk.Visible = false;
+                fBlau.Visible = false;
+                fPink.Visible = false;
+                fGrau.Visible = false;
+                aktfarbe.Visible = true;
+                rgbTimer.Enabled = true;
+                rgbBar.Visible = true;
+            }
+            else
+            {
+                fLachs.Visible = true;
+                fOrange.Visible = true;
+                fGelb.Visible = true;
+                fGruen.Visible = true;
+                fTurk.Visible = true;
+                fBlau.Visible = true;
+                fPink.Visible = true;
+                fGrau.Visible = true;
+                aktfarbe.Visible = false;
+                rgbTimer.Enabled = false;
+                rgbBar.Visible = false;
+            }
+        }
+        private void rgbTimer_Tick(object sender, EventArgs e)
+        {
+            switch (wo)
+            {
+
+                case 0:
+                    r += 10;
+                    if (r >= 250)
+                    {
+                        wo = 1;
+                        break;
+                    }
+                    break;
+
+                case 1:
+                    g -= 10;
+                    if (g <= 100)
+                    {
+                        wo = 2;
+                        break;
+                    }
+                    break;
+                case 2:
+                    b += 10;
+                    if (b >= 250)
+                    {
+                        wo = 3;
+                        break;
+                    }
+                    break;
+                case 3:
+                    r -= 10;
+                    if (r <= 100)
+                    {
+                        wo = 4;
+                        break;
+                    }
+                    break;
+                case 4:
+                    g += 10;
+                    if (g >= 250)
+                    {
+                        wo = 5;
+                        break;
+                    }
+                    break;
+                case 5:
+                    b -= 10;
+                    if (b <= 100)
+                    {
+                        wo = 0;
+                        break;
+                    }
+                    break;
+
+            }
+
+            aktfarbe.Text = "r" + Convert.ToString(r) + " g" + Convert.ToString(g) + " b" + Convert.ToString(b);
+            Color rgbColor = Color.FromArgb(r, g, b);
+            if (!DarkModeBox.Checked)
+                rgbColor = Color.FromArgb(r - 40, g - 40, b - 40);
+
+            b1.ForeColor = b2.ForeColor = b3.ForeColor = b4.ForeColor = b5.ForeColor = b6.ForeColor = b7.ForeColor = b8.ForeColor = b9.ForeColor = b0.ForeColor = b00.ForeColor = bPunkt.ForeColor = FarbTestBt.ForeColor = Ergebnis2.ForeColor = rgbColor;
+            if (DarkModeBox.Checked)
+                bCA.ForeColor = Color.FromArgb(r / 2, g / 2, b / 2);
+            if (!DarkModeBox.Checked)
+                bCA.ForeColor = Color.FromArgb(r, g, b);
+        }
+        private void rgbBar_Scroll(object sender, EventArgs e)
+        {
+            //rgb schnelligkeit // rgbTimer ändern
+
+            rgbTimer.Interval = (rgbBar.Value + 1) * 10;
+        }
 
         //
         //METHODEN
         //
 
-        private void AnzeigeRefresh()
+        private void DisplayRefresh()
         {
             if (!EasyMd.Checked) //Bei Erweitertem Modus
             {
@@ -509,7 +759,7 @@ namespace Tischrechner
             AnsUsed = false;
 
 
-            AnzeigeRefresh();
+            DisplayRefresh();
         }
         private void ClearLast()
         {
@@ -534,15 +784,15 @@ namespace Tischrechner
                     }
                 }
                 catch { }
-                AnzeigeRefresh();
+                DisplayRefresh();
             }
         }
-        public void Speichern()
+        public void Save()
         {
             if (File.Exists(@"" + Pfad + ".csv")) //Wenn die File schon existiert, dann
                 File.WriteAllLines(@"" + Pfad + ".csv", Re.SaveData); //SaveData Liste einschreiben
         }
-        public void Laden()
+        public void LoadSave()
         {
             if (File.Exists(@"" + Pfad + ".csv"))
             {
@@ -565,7 +815,7 @@ namespace Tischrechner
         }
         private void PfadTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(@"" + PfadTextBox.Text + ".csv"))
+            if (File.Exists(@"" + PfadTextBox.Text + ".csv") && !juststarted)
             {
                 if (Pfad == PfadTextBox.Text)
                     Pfad = PfadTextBox.Text;
@@ -586,16 +836,16 @@ namespace Tischrechner
 
                 }
             }
-            else
+            else if (!juststarted)
             {
-                FehlerLbl.Text = "Der Pfad existiert nicht.";
+                FehlerLbl.Text = "Diese Datei existiert nicht.";
                 pathCreate.Visible = true;
             }
 
         }
         private void pathCreate_Click(object sender, EventArgs e)
         {
-            if(!File.Exists(@"" + PfadTextBox.Text + ".csv") && PfadTextBox.Text != "")
+            if (!File.Exists(@"" + PfadTextBox.Text + ".csv") && PfadTextBox.Text != "")
             {
                 File.Create(@"" + PfadTextBox.Text + ".csv");
                 Pfad = PfadTextBox.Text;
@@ -605,11 +855,6 @@ namespace Tischrechner
                 Re.SaveData.Clear();
                 Rechnungen.Items.Clear();
             }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            Uhrzeitlbl.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }

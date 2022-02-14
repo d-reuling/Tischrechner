@@ -9,10 +9,9 @@ namespace Tischrechner
     class Rechnung
     {
 
-        //TODO: Anpassen/Vereinfachen
         LinkedList<string> Zahl = new LinkedList<string>(); //Zahl LinkedList (Für PvS und OhnePvS)
         Queue<string> Operator = new Queue<string>(); //Operatoren Queue (Für PvS und OhnePvS)
-        public string TESTSTRINGAENDERUNG; 
+
         public string CurDigit; //Aktuelle Zahl (Für Einfachen Modus)
         public string WhInvoice; //Gesamte Rechnung (Für Einfachen Modus)
         public string CurOperator; //Aktueller Operator (Um aufeinanderfolgende Operatoren zu vermeiden)
@@ -27,8 +26,8 @@ namespace Tischrechner
         public string OhnePvS(string Rechnung)
         {
             //Rechnung ohne PvS
-            
-            string Erg = "";
+
+            string Erg = Rechnung;
             try
             {
                 //Rechnung (Operatoren und Zahlen mit einem Leerzeichen getrennt) wird bei diesen gesplittet und in Array gepackt.
@@ -42,6 +41,7 @@ namespace Tischrechner
                     else
                         //wenn der Array teil kein Operator ist, kann es nur noch eine Zahl sein und wird dementsprechend auf die Zahl LinkedList getan.
                         Zahl.AddLast(s);
+
                 }
             }
             catch { return Rechnung; }
@@ -110,7 +110,7 @@ namespace Tischrechner
                     AnsWert = Erg;
                 }
                 else
-                if(Operator.Peek() == "%")
+                if (Operator.Peek() == "%")
                 {
                     Operator.Dequeue();
                     Dig1 = Convert.ToDouble(Zahl.First());
@@ -133,7 +133,7 @@ namespace Tischrechner
         public string PvS(string Rechnung)
         {
             string Invoice = "";
-            string Erg = "";
+            string Erg = Rechnung;
             try
             {
                 //Schon bei OhnePvS erklärt
@@ -337,8 +337,9 @@ namespace Tischrechner
                 CurOperator = null;
 
                 CurShow = ReErg.ToString();
-            } catch { }
-            return ReErg;   
+            }
+            catch { }
+            return ReErg;
         }
     }
 }
