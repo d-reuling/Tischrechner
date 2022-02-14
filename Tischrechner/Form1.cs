@@ -405,6 +405,7 @@ namespace Tischrechner
                 bProz.Visible = true;
                 bNeg.Visible = true;
                 EasyMdError.Visible = false;
+                bBruch.Visible = true;
 
                 CurMode.Text = "Erweiterter Modus: Ohne Punkt vor Strich";
             }
@@ -855,6 +856,12 @@ namespace Tischrechner
                 Re.SaveData.Clear();
                 Rechnungen.Items.Clear();
             }
+        }
+
+        private void bBruch_Click(object sender, EventArgs e)
+        {
+            Form Bruch = new Bruch();
+            Bruch.Show();
         }
     }
 }

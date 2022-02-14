@@ -117,6 +117,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
+            this.bBruch = new System.Windows.Forms.Button();
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -142,10 +143,11 @@
             this.LogsPage.Controls.Add(this.LogBack);
             this.LogsPage.Controls.Add(this.label3);
             this.LogsPage.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogsPage.Location = new System.Drawing.Point(4, 22);
+            this.LogsPage.Location = new System.Drawing.Point(4, 25);
+            this.LogsPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LogsPage.Name = "LogsPage";
-            this.LogsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.LogsPage.Size = new System.Drawing.Size(1150, 628);
+            this.LogsPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogsPage.Size = new System.Drawing.Size(1536, 776);
             this.LogsPage.TabIndex = 3;
             this.LogsPage.Text = "logs";
             // 
@@ -154,9 +156,10 @@
             this.Uhrzeitlbl3.BackColor = System.Drawing.Color.Transparent;
             this.Uhrzeitlbl3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Uhrzeitlbl3.ForeColor = System.Drawing.Color.Silver;
-            this.Uhrzeitlbl3.Location = new System.Drawing.Point(3, 596);
+            this.Uhrzeitlbl3.Location = new System.Drawing.Point(4, 734);
+            this.Uhrzeitlbl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Uhrzeitlbl3.Name = "Uhrzeitlbl3";
-            this.Uhrzeitlbl3.Size = new System.Drawing.Size(94, 28);
+            this.Uhrzeitlbl3.Size = new System.Drawing.Size(125, 34);
             this.Uhrzeitlbl3.TabIndex = 91;
             // 
             // sourcelbl
@@ -165,9 +168,10 @@
             this.sourcelbl.BackColor = System.Drawing.Color.Transparent;
             this.sourcelbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sourcelbl.ForeColor = System.Drawing.Color.Gray;
-            this.sourcelbl.Location = new System.Drawing.Point(282, 43);
+            this.sourcelbl.Location = new System.Drawing.Point(376, 53);
+            this.sourcelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sourcelbl.Name = "sourcelbl";
-            this.sourcelbl.Size = new System.Drawing.Size(84, 29);
+            this.sourcelbl.Size = new System.Drawing.Size(105, 37);
             this.sourcelbl.TabIndex = 76;
             this.sourcelbl.Text = "Quelle:";
             // 
@@ -177,9 +181,10 @@
             this.EasyMdError.BackColor = System.Drawing.Color.Transparent;
             this.EasyMdError.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EasyMdError.ForeColor = System.Drawing.Color.Silver;
-            this.EasyMdError.Location = new System.Drawing.Point(342, 552);
+            this.EasyMdError.Location = new System.Drawing.Point(456, 679);
+            this.EasyMdError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EasyMdError.Name = "EasyMdError";
-            this.EasyMdError.Size = new System.Drawing.Size(453, 29);
+            this.EasyMdError.Size = new System.Drawing.Size(567, 37);
             this.EasyMdError.TabIndex = 73;
             this.EasyMdError.Text = "Zum Einsetzen einfachen Modus ausschalten";
             this.EasyMdError.Visible = false;
@@ -191,10 +196,10 @@
             this.bLoadInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLoadInv.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLoadInv.ForeColor = System.Drawing.Color.Silver;
-            this.bLoadInv.Location = new System.Drawing.Point(508, 545);
+            this.bLoadInv.Location = new System.Drawing.Point(677, 671);
             this.bLoadInv.Margin = new System.Windows.Forms.Padding(0);
             this.bLoadInv.Name = "bLoadInv";
-            this.bLoadInv.Size = new System.Drawing.Size(131, 42);
+            this.bLoadInv.Size = new System.Drawing.Size(175, 52);
             this.bLoadInv.TabIndex = 72;
             this.bLoadInv.Text = "Einsetzen";
             this.bLoadInv.UseMnemonic = false;
@@ -210,18 +215,20 @@
             this.Rechnungen.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rechnungen.ForeColor = System.Drawing.Color.Silver;
             this.Rechnungen.FormattingEnabled = true;
-            this.Rechnungen.ItemHeight = 33;
-            this.Rechnungen.Location = new System.Drawing.Point(287, 75);
+            this.Rechnungen.ItemHeight = 41;
+            this.Rechnungen.Location = new System.Drawing.Point(383, 92);
+            this.Rechnungen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Rechnungen.Name = "Rechnungen";
-            this.Rechnungen.Size = new System.Drawing.Size(580, 462);
+            this.Rechnungen.Size = new System.Drawing.Size(773, 533);
             this.Rechnungen.TabIndex = 71;
             this.Rechnungen.SelectedIndexChanged += new System.EventHandler(this.Rechnungen_SelectedIndexChanged);
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(1084, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(1445, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(80, 76);
             this.pictureBox3.TabIndex = 70;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.SetZumRech_Click);
@@ -233,9 +240,10 @@
             this.SettLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SettLog.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettLog.ForeColor = System.Drawing.Color.Silver;
-            this.SettLog.Location = new System.Drawing.Point(1018, 590);
+            this.SettLog.Location = new System.Drawing.Point(1357, 726);
+            this.SettLog.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SettLog.Name = "SettLog";
-            this.SettLog.Size = new System.Drawing.Size(126, 26);
+            this.SettLog.Size = new System.Drawing.Size(161, 33);
             this.SettLog.TabIndex = 7;
             this.SettLog.Text = "Einstellungen";
             this.SettLog.Click += new System.EventHandler(this.Settings_Click);
@@ -247,9 +255,10 @@
             this.LogBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogBack.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogBack.ForeColor = System.Drawing.Color.Silver;
-            this.LogBack.Location = new System.Drawing.Point(6, 3);
+            this.LogBack.Location = new System.Drawing.Point(8, 4);
+            this.LogBack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LogBack.Name = "LogBack";
-            this.LogBack.Size = new System.Drawing.Size(54, 45);
+            this.LogBack.Size = new System.Drawing.Size(68, 58);
             this.LogBack.TabIndex = 6;
             this.LogBack.Text = "←";
             this.LogBack.Click += new System.EventHandler(this.SetZumRech_Click);
@@ -260,9 +269,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label3.Location = new System.Drawing.Point(513, 3);
+            this.label3.Location = new System.Drawing.Point(684, 4);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 45);
+            this.label3.Size = new System.Drawing.Size(162, 58);
             this.label3.TabIndex = 5;
             this.label3.Text = "Verlauf";
             // 
@@ -306,19 +316,21 @@
             this.SettingsPage.Controls.Add(this.AutoSaveBox);
             this.SettingsPage.Controls.Add(this.DarkModeBox);
             this.SettingsPage.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsPage.Location = new System.Drawing.Point(4, 22);
+            this.SettingsPage.Location = new System.Drawing.Point(4, 25);
+            this.SettingsPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SettingsPage.Name = "SettingsPage";
-            this.SettingsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.SettingsPage.Size = new System.Drawing.Size(1150, 628);
+            this.SettingsPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SettingsPage.Size = new System.Drawing.Size(1536, 776);
             this.SettingsPage.TabIndex = 1;
             this.SettingsPage.Text = "settings";
             // 
             // rgbBar
             // 
-            this.rgbBar.Location = new System.Drawing.Point(160, 455);
+            this.rgbBar.Location = new System.Drawing.Point(213, 560);
+            this.rgbBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rgbBar.Name = "rgbBar";
             this.rgbBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rgbBar.Size = new System.Drawing.Size(123, 45);
+            this.rgbBar.Size = new System.Drawing.Size(164, 56);
             this.rgbBar.TabIndex = 116;
             this.rgbBar.TickFrequency = 2;
             this.rgbBar.Value = 10;
@@ -331,9 +343,10 @@
             this.aktfarbe.BackColor = System.Drawing.Color.Transparent;
             this.aktfarbe.Font = new System.Drawing.Font("Calibri", 8.75F);
             this.aktfarbe.ForeColor = System.Drawing.Color.Gray;
-            this.aktfarbe.Location = new System.Drawing.Point(165, 406);
+            this.aktfarbe.Location = new System.Drawing.Point(220, 500);
+            this.aktfarbe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aktfarbe.Name = "aktfarbe";
-            this.aktfarbe.Size = new System.Drawing.Size(93, 14);
+            this.aktfarbe.Size = new System.Drawing.Size(109, 18);
             this.aktfarbe.TabIndex = 115;
             this.aktfarbe.Text = "r:250 g:100 b:250";
             this.aktfarbe.Visible = false;
@@ -345,9 +358,10 @@
             this.rgbBox.FlatAppearance.BorderSize = 0;
             this.rgbBox.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rgbBox.ForeColor = System.Drawing.Color.Silver;
-            this.rgbBox.Location = new System.Drawing.Point(167, 427);
+            this.rgbBox.Location = new System.Drawing.Point(223, 526);
+            this.rgbBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rgbBox.Name = "rgbBox";
-            this.rgbBox.Size = new System.Drawing.Size(119, 33);
+            this.rgbBox.Size = new System.Drawing.Size(145, 41);
             this.rgbBox.TabIndex = 114;
             this.rgbBox.Text = "Rainbow";
             this.rgbBox.UseVisualStyleBackColor = false;
@@ -361,10 +375,10 @@
             this.FarbTestBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FarbTestBt.Font = new System.Drawing.Font("Calibri", 26.25F);
             this.FarbTestBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.FarbTestBt.Location = new System.Drawing.Point(331, 432);
+            this.FarbTestBt.Location = new System.Drawing.Point(441, 532);
             this.FarbTestBt.Margin = new System.Windows.Forms.Padding(0);
             this.FarbTestBt.Name = "FarbTestBt";
-            this.FarbTestBt.Size = new System.Drawing.Size(54, 53);
+            this.FarbTestBt.Size = new System.Drawing.Size(72, 65);
             this.FarbTestBt.TabIndex = 113;
             this.FarbTestBt.Text = "0";
             this.FarbTestBt.UseMnemonic = false;
@@ -377,9 +391,10 @@
             this.fGrau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fGrau.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fGrau.ForeColor = System.Drawing.Color.Silver;
-            this.fGrau.Location = new System.Drawing.Point(363, 401);
+            this.fGrau.Location = new System.Drawing.Point(484, 494);
+            this.fGrau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fGrau.Name = "fGrau";
-            this.fGrau.Size = new System.Drawing.Size(22, 23);
+            this.fGrau.Size = new System.Drawing.Size(28, 29);
             this.fGrau.TabIndex = 112;
             this.fGrau.Text = "   ";
             this.fGrau.Click += new System.EventHandler(this.FarbenClick);
@@ -391,9 +406,10 @@
             this.fTurk.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fTurk.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fTurk.ForeColor = System.Drawing.Color.Silver;
-            this.fTurk.Location = new System.Drawing.Point(279, 401);
+            this.fTurk.Location = new System.Drawing.Point(372, 494);
+            this.fTurk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fTurk.Name = "fTurk";
-            this.fTurk.Size = new System.Drawing.Size(22, 23);
+            this.fTurk.Size = new System.Drawing.Size(28, 29);
             this.fTurk.TabIndex = 111;
             this.fTurk.Text = "   ";
             this.fTurk.Click += new System.EventHandler(this.FarbenClick);
@@ -405,9 +421,10 @@
             this.fOrange.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fOrange.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fOrange.ForeColor = System.Drawing.Color.Silver;
-            this.fOrange.Location = new System.Drawing.Point(195, 401);
+            this.fOrange.Location = new System.Drawing.Point(260, 494);
+            this.fOrange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fOrange.Name = "fOrange";
-            this.fOrange.Size = new System.Drawing.Size(22, 23);
+            this.fOrange.Size = new System.Drawing.Size(28, 29);
             this.fOrange.TabIndex = 110;
             this.fOrange.Text = "   ";
             this.fOrange.Click += new System.EventHandler(this.FarbenClick);
@@ -419,9 +436,10 @@
             this.fPink.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fPink.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fPink.ForeColor = System.Drawing.Color.Silver;
-            this.fPink.Location = new System.Drawing.Point(335, 401);
+            this.fPink.Location = new System.Drawing.Point(447, 494);
+            this.fPink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fPink.Name = "fPink";
-            this.fPink.Size = new System.Drawing.Size(22, 23);
+            this.fPink.Size = new System.Drawing.Size(28, 29);
             this.fPink.TabIndex = 109;
             this.fPink.Text = "   ";
             this.fPink.Click += new System.EventHandler(this.FarbenClick);
@@ -433,9 +451,10 @@
             this.fGelb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fGelb.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fGelb.ForeColor = System.Drawing.Color.Silver;
-            this.fGelb.Location = new System.Drawing.Point(223, 401);
+            this.fGelb.Location = new System.Drawing.Point(297, 494);
+            this.fGelb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fGelb.Name = "fGelb";
-            this.fGelb.Size = new System.Drawing.Size(22, 23);
+            this.fGelb.Size = new System.Drawing.Size(28, 29);
             this.fGelb.TabIndex = 108;
             this.fGelb.Text = "   ";
             this.fGelb.Click += new System.EventHandler(this.FarbenClick);
@@ -447,9 +466,10 @@
             this.fGruen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fGruen.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fGruen.ForeColor = System.Drawing.Color.Silver;
-            this.fGruen.Location = new System.Drawing.Point(251, 401);
+            this.fGruen.Location = new System.Drawing.Point(335, 494);
+            this.fGruen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fGruen.Name = "fGruen";
-            this.fGruen.Size = new System.Drawing.Size(22, 23);
+            this.fGruen.Size = new System.Drawing.Size(28, 29);
             this.fGruen.TabIndex = 107;
             this.fGruen.Text = "   ";
             this.fGruen.Click += new System.EventHandler(this.FarbenClick);
@@ -461,9 +481,10 @@
             this.fBlau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fBlau.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fBlau.ForeColor = System.Drawing.Color.Silver;
-            this.fBlau.Location = new System.Drawing.Point(307, 401);
+            this.fBlau.Location = new System.Drawing.Point(409, 494);
+            this.fBlau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fBlau.Name = "fBlau";
-            this.fBlau.Size = new System.Drawing.Size(22, 23);
+            this.fBlau.Size = new System.Drawing.Size(28, 29);
             this.fBlau.TabIndex = 106;
             this.fBlau.Text = "   ";
             this.fBlau.Click += new System.EventHandler(this.FarbenClick);
@@ -475,9 +496,10 @@
             this.fLachs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fLachs.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fLachs.ForeColor = System.Drawing.Color.Silver;
-            this.fLachs.Location = new System.Drawing.Point(167, 401);
+            this.fLachs.Location = new System.Drawing.Point(223, 494);
+            this.fLachs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fLachs.Name = "fLachs";
-            this.fLachs.Size = new System.Drawing.Size(22, 23);
+            this.fLachs.Size = new System.Drawing.Size(28, 29);
             this.fLachs.TabIndex = 105;
             this.fLachs.Text = "   ";
             this.fLachs.Click += new System.EventHandler(this.FarbenClick);
@@ -488,9 +510,10 @@
             this.hiernichts.BackColor = System.Drawing.Color.Transparent;
             this.hiernichts.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hiernichts.ForeColor = System.Drawing.Color.Silver;
-            this.hiernichts.Location = new System.Drawing.Point(161, 366);
+            this.hiernichts.Location = new System.Drawing.Point(215, 450);
+            this.hiernichts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.hiernichts.Name = "hiernichts";
-            this.hiernichts.Size = new System.Drawing.Size(225, 29);
+            this.hiernichts.Size = new System.Drawing.Size(281, 37);
             this.hiernichts.TabIndex = 103;
             this.hiernichts.Text = "Farbe vom Zahlenfeld";
             // 
@@ -499,9 +522,10 @@
             this.Uhrzeitlbl2.BackColor = System.Drawing.Color.Transparent;
             this.Uhrzeitlbl2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Uhrzeitlbl2.ForeColor = System.Drawing.Color.Silver;
-            this.Uhrzeitlbl2.Location = new System.Drawing.Point(3, 569);
+            this.Uhrzeitlbl2.Location = new System.Drawing.Point(4, 700);
+            this.Uhrzeitlbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Uhrzeitlbl2.Name = "Uhrzeitlbl2";
-            this.Uhrzeitlbl2.Size = new System.Drawing.Size(94, 28);
+            this.Uhrzeitlbl2.Size = new System.Drawing.Size(125, 34);
             this.Uhrzeitlbl2.TabIndex = 88;
             // 
             // ClockOn
@@ -512,9 +536,10 @@
             this.ClockOn.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ClockOn.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClockOn.ForeColor = System.Drawing.Color.Silver;
-            this.ClockOn.Location = new System.Drawing.Point(143, 320);
+            this.ClockOn.Location = new System.Drawing.Point(191, 394);
+            this.ClockOn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ClockOn.Name = "ClockOn";
-            this.ClockOn.Size = new System.Drawing.Size(194, 33);
+            this.ClockOn.Size = new System.Drawing.Size(242, 41);
             this.ClockOn.TabIndex = 87;
             this.ClockOn.Text = "Uhrzeit anzeigen";
             this.ClockOn.UseVisualStyleBackColor = false;
@@ -525,9 +550,10 @@
             this.manSavelbl.AutoSize = true;
             this.manSavelbl.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manSavelbl.ForeColor = System.Drawing.Color.Green;
-            this.manSavelbl.Location = new System.Drawing.Point(756, 215);
+            this.manSavelbl.Location = new System.Drawing.Point(1008, 265);
+            this.manSavelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.manSavelbl.Name = "manSavelbl";
-            this.manSavelbl.Size = new System.Drawing.Size(0, 24);
+            this.manSavelbl.Size = new System.Drawing.Size(0, 31);
             this.manSavelbl.TabIndex = 86;
             // 
             // manSave
@@ -537,10 +563,10 @@
             this.manSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.manSave.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manSave.ForeColor = System.Drawing.Color.Silver;
-            this.manSave.Location = new System.Drawing.Point(751, 180);
+            this.manSave.Location = new System.Drawing.Point(1001, 222);
             this.manSave.Margin = new System.Windows.Forms.Padding(0);
             this.manSave.Name = "manSave";
-            this.manSave.Size = new System.Drawing.Size(263, 35);
+            this.manSave.Size = new System.Drawing.Size(351, 43);
             this.manSave.TabIndex = 85;
             this.manSave.Text = "Manuell speichern";
             this.manSave.UseMnemonic = false;
@@ -554,9 +580,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(746, 259);
+            this.label5.Location = new System.Drawing.Point(995, 319);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 29);
+            this.label5.Size = new System.Drawing.Size(81, 37);
             this.label5.TabIndex = 84;
             this.label5.Text = "Datei";
             // 
@@ -567,10 +594,10 @@
             this.pathCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pathCreate.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pathCreate.ForeColor = System.Drawing.Color.Silver;
-            this.pathCreate.Location = new System.Drawing.Point(751, 411);
+            this.pathCreate.Location = new System.Drawing.Point(1001, 506);
             this.pathCreate.Margin = new System.Windows.Forms.Padding(0);
             this.pathCreate.Name = "pathCreate";
-            this.pathCreate.Size = new System.Drawing.Size(263, 35);
+            this.pathCreate.Size = new System.Drawing.Size(351, 43);
             this.pathCreate.TabIndex = 83;
             this.pathCreate.Text = "Datei erstellen";
             this.pathCreate.UseMnemonic = false;
@@ -583,9 +610,10 @@
             this.FehlerLbl.AutoSize = true;
             this.FehlerLbl.Font = new System.Drawing.Font("Calibri", 15F);
             this.FehlerLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.FehlerLbl.Location = new System.Drawing.Point(746, 383);
+            this.FehlerLbl.Location = new System.Drawing.Point(995, 471);
+            this.FehlerLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FehlerLbl.Name = "FehlerLbl";
-            this.FehlerLbl.Size = new System.Drawing.Size(0, 24);
+            this.FehlerLbl.Size = new System.Drawing.Size(0, 31);
             this.FehlerLbl.TabIndex = 82;
             // 
             // label2
@@ -594,9 +622,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(746, 353);
+            this.label2.Location = new System.Drawing.Point(995, 434);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 29);
+            this.label2.Size = new System.Drawing.Size(188, 37);
             this.label2.TabIndex = 81;
             this.label2.Text = "Data_[Datum]";
             // 
@@ -606,9 +635,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(746, 292);
+            this.label1.Location = new System.Drawing.Point(995, 359);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 29);
+            this.label1.Size = new System.Drawing.Size(345, 37);
             this.label1.TabIndex = 80;
             this.label1.Text = "Hier Dateinamen eingeben";
             // 
@@ -617,9 +647,10 @@
             this.PfadTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(42)))));
             this.PfadTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PfadTextBox.ForeColor = System.Drawing.Color.Silver;
-            this.PfadTextBox.Location = new System.Drawing.Point(751, 326);
+            this.PfadTextBox.Location = new System.Drawing.Point(1001, 401);
+            this.PfadTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PfadTextBox.Name = "PfadTextBox";
-            this.PfadTextBox.Size = new System.Drawing.Size(263, 26);
+            this.PfadTextBox.Size = new System.Drawing.Size(351, 33);
             this.PfadTextBox.TabIndex = 79;
             this.PfadTextBox.TextChanged += new System.EventHandler(this.PfadTextBox_TextChanged);
             // 
@@ -629,9 +660,10 @@
             this.lastchange.BackColor = System.Drawing.Color.Transparent;
             this.lastchange.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastchange.ForeColor = System.Drawing.Color.Gray;
-            this.lastchange.Location = new System.Drawing.Point(1, 612);
+            this.lastchange.Location = new System.Drawing.Point(1, 753);
+            this.lastchange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastchange.Name = "lastchange";
-            this.lastchange.Size = new System.Drawing.Size(140, 13);
+            this.lastchange.Size = new System.Drawing.Size(170, 17);
             this.lastchange.TabIndex = 77;
             this.lastchange.Text = "letzte Änderung: 14.02.2022";
             // 
@@ -641,9 +673,10 @@
             this.version.BackColor = System.Drawing.Color.Transparent;
             this.version.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.version.ForeColor = System.Drawing.Color.Gray;
-            this.version.Location = new System.Drawing.Point(1, 597);
+            this.version.Location = new System.Drawing.Point(1, 735);
+            this.version.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.version.Name = "version";
-            this.version.Size = new System.Drawing.Size(157, 15);
+            this.version.Size = new System.Drawing.Size(200, 21);
             this.version.TabIndex = 76;
             this.version.Text = "version 1.1 by Lucas Janzen";
             // 
@@ -654,18 +687,20 @@
             this.AdminClick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdminClick.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminClick.ForeColor = System.Drawing.Color.Silver;
-            this.AdminClick.Location = new System.Drawing.Point(1023, 591);
+            this.AdminClick.Location = new System.Drawing.Point(1364, 727);
+            this.AdminClick.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AdminClick.Name = "AdminClick";
-            this.AdminClick.Size = new System.Drawing.Size(124, 26);
+            this.AdminClick.Size = new System.Drawing.Size(159, 33);
             this.AdminClick.TabIndex = 71;
             this.AdminClick.Text = "Experimental";
             this.AdminClick.Click += new System.EventHandler(this.AdminClick_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(1084, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(1445, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(80, 76);
             this.pictureBox2.TabIndex = 70;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.SetZumRech_Click);
@@ -676,9 +711,10 @@
             this.lblspeichern.BackColor = System.Drawing.Color.Transparent;
             this.lblspeichern.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblspeichern.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblspeichern.Location = new System.Drawing.Point(746, 112);
+            this.lblspeichern.Location = new System.Drawing.Point(995, 138);
+            this.lblspeichern.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblspeichern.Name = "lblspeichern";
-            this.lblspeichern.Size = new System.Drawing.Size(111, 29);
+            this.lblspeichern.Size = new System.Drawing.Size(139, 37);
             this.lblspeichern.TabIndex = 8;
             this.lblspeichern.Text = "Speichern";
             // 
@@ -691,9 +727,10 @@
             this.EasyMd.FlatAppearance.BorderSize = 0;
             this.EasyMd.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EasyMd.ForeColor = System.Drawing.Color.Silver;
-            this.EasyMd.Location = new System.Drawing.Point(143, 144);
+            this.EasyMd.Location = new System.Drawing.Point(191, 177);
+            this.EasyMd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EasyMd.Name = "EasyMd";
-            this.EasyMd.Size = new System.Drawing.Size(199, 33);
+            this.EasyMd.Size = new System.Drawing.Size(246, 41);
             this.EasyMd.TabIndex = 7;
             this.EasyMd.Text = "Einfacher Modus";
             this.EasyMd.UseVisualStyleBackColor = false;
@@ -706,9 +743,10 @@
             this.SetZumRech.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SetZumRech.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SetZumRech.ForeColor = System.Drawing.Color.Silver;
-            this.SetZumRech.Location = new System.Drawing.Point(6, 3);
+            this.SetZumRech.Location = new System.Drawing.Point(8, 4);
+            this.SetZumRech.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SetZumRech.Name = "SetZumRech";
-            this.SetZumRech.Size = new System.Drawing.Size(54, 45);
+            this.SetZumRech.Size = new System.Drawing.Size(68, 58);
             this.SetZumRech.TabIndex = 6;
             this.SetZumRech.Text = "←";
             this.SetZumRech.Click += new System.EventHandler(this.SetZumRech_Click);
@@ -719,9 +757,10 @@
             this.SettingsUe.BackColor = System.Drawing.Color.Transparent;
             this.SettingsUe.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsUe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.SettingsUe.Location = new System.Drawing.Point(470, 3);
+            this.SettingsUe.Location = new System.Drawing.Point(627, 4);
+            this.SettingsUe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SettingsUe.Name = "SettingsUe";
-            this.SettingsUe.Size = new System.Drawing.Size(217, 45);
+            this.SettingsUe.Size = new System.Drawing.Size(281, 58);
             this.SettingsUe.TabIndex = 5;
             this.SettingsUe.Text = "Einstellungen";
             // 
@@ -731,9 +770,10 @@
             this.SettingsDesign.BackColor = System.Drawing.Color.Transparent;
             this.SettingsDesign.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsDesign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.SettingsDesign.Location = new System.Drawing.Point(138, 259);
+            this.SettingsDesign.Location = new System.Drawing.Point(184, 319);
+            this.SettingsDesign.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SettingsDesign.Name = "SettingsDesign";
-            this.SettingsDesign.Size = new System.Drawing.Size(108, 29);
+            this.SettingsDesign.Size = new System.Drawing.Size(136, 37);
             this.SettingsDesign.TabIndex = 4;
             this.SettingsDesign.Text = "Aussehen";
             // 
@@ -743,9 +783,10 @@
             this.SettingsFunktion.BackColor = System.Drawing.Color.Transparent;
             this.SettingsFunktion.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsFunktion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.SettingsFunktion.Location = new System.Drawing.Point(138, 112);
+            this.SettingsFunktion.Location = new System.Drawing.Point(184, 138);
+            this.SettingsFunktion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SettingsFunktion.Name = "SettingsFunktion";
-            this.SettingsFunktion.Size = new System.Drawing.Size(100, 29);
+            this.SettingsFunktion.Size = new System.Drawing.Size(126, 37);
             this.SettingsFunktion.TabIndex = 3;
             this.SettingsFunktion.Text = "Funktion";
             // 
@@ -756,9 +797,10 @@
             this.PvS.Enabled = false;
             this.PvS.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PvS.ForeColor = System.Drawing.Color.Silver;
-            this.PvS.Location = new System.Drawing.Point(143, 172);
+            this.PvS.Location = new System.Drawing.Point(191, 212);
+            this.PvS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PvS.Name = "PvS";
-            this.PvS.Size = new System.Drawing.Size(285, 33);
+            this.PvS.Size = new System.Drawing.Size(357, 41);
             this.PvS.TabIndex = 2;
             this.PvS.Text = "Punkt vor Strich beachten";
             this.PvS.UseVisualStyleBackColor = false;
@@ -772,9 +814,10 @@
             this.AutoSaveBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AutoSaveBox.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AutoSaveBox.ForeColor = System.Drawing.Color.Silver;
-            this.AutoSaveBox.Location = new System.Drawing.Point(750, 144);
+            this.AutoSaveBox.Location = new System.Drawing.Point(1000, 177);
+            this.AutoSaveBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AutoSaveBox.Name = "AutoSaveBox";
-            this.AutoSaveBox.Size = new System.Drawing.Size(208, 33);
+            this.AutoSaveBox.Size = new System.Drawing.Size(259, 41);
             this.AutoSaveBox.TabIndex = 1;
             this.AutoSaveBox.Text = "Autom. Speichern";
             this.AutoSaveBox.UseVisualStyleBackColor = false;
@@ -788,9 +831,10 @@
             this.DarkModeBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DarkModeBox.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DarkModeBox.ForeColor = System.Drawing.Color.Silver;
-            this.DarkModeBox.Location = new System.Drawing.Point(143, 291);
+            this.DarkModeBox.Location = new System.Drawing.Point(191, 358);
+            this.DarkModeBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DarkModeBox.Name = "DarkModeBox";
-            this.DarkModeBox.Size = new System.Drawing.Size(143, 33);
+            this.DarkModeBox.Size = new System.Drawing.Size(176, 41);
             this.DarkModeBox.TabIndex = 0;
             this.DarkModeBox.Text = "Dark-Mode";
             this.DarkModeBox.UseVisualStyleBackColor = false;
@@ -799,6 +843,7 @@
             // RechnerPage
             // 
             this.RechnerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.RechnerPage.Controls.Add(this.bBruch);
             this.RechnerPage.Controls.Add(this.Uhrzeitlbl);
             this.RechnerPage.Controls.Add(this.pictureBox1);
             this.RechnerPage.Controls.Add(this.bNeg);
@@ -830,10 +875,11 @@
             this.RechnerPage.Controls.Add(this.b7);
             this.RechnerPage.Controls.Add(this.Settings);
             this.RechnerPage.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RechnerPage.Location = new System.Drawing.Point(4, 22);
+            this.RechnerPage.Location = new System.Drawing.Point(4, 25);
+            this.RechnerPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RechnerPage.Name = "RechnerPage";
-            this.RechnerPage.Padding = new System.Windows.Forms.Padding(3);
-            this.RechnerPage.Size = new System.Drawing.Size(1150, 628);
+            this.RechnerPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RechnerPage.Size = new System.Drawing.Size(1536, 776);
             this.RechnerPage.TabIndex = 0;
             this.RechnerPage.Text = "calculator";
             // 
@@ -842,16 +888,18 @@
             this.Uhrzeitlbl.BackColor = System.Drawing.Color.Transparent;
             this.Uhrzeitlbl.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Uhrzeitlbl.ForeColor = System.Drawing.Color.Silver;
-            this.Uhrzeitlbl.Location = new System.Drawing.Point(6, 3);
+            this.Uhrzeitlbl.Location = new System.Drawing.Point(8, 4);
+            this.Uhrzeitlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Uhrzeitlbl.Name = "Uhrzeitlbl";
-            this.Uhrzeitlbl.Size = new System.Drawing.Size(94, 28);
+            this.Uhrzeitlbl.Size = new System.Drawing.Size(125, 34);
             this.Uhrzeitlbl.TabIndex = 70;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1084, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(1445, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 76);
             this.pictureBox1.TabIndex = 69;
             this.pictureBox1.TabStop = false;
             // 
@@ -862,10 +910,10 @@
             this.bNeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bNeg.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bNeg.ForeColor = System.Drawing.Color.Gray;
-            this.bNeg.Location = new System.Drawing.Point(294, 214);
+            this.bNeg.Location = new System.Drawing.Point(392, 263);
             this.bNeg.Margin = new System.Windows.Forms.Padding(0);
             this.bNeg.Name = "bNeg";
-            this.bNeg.Size = new System.Drawing.Size(84, 80);
+            this.bNeg.Size = new System.Drawing.Size(112, 98);
             this.bNeg.TabIndex = 68;
             this.bNeg.Text = "+/-";
             this.bNeg.UseMnemonic = false;
@@ -880,9 +928,10 @@
             this.Logs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Logs.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Logs.ForeColor = System.Drawing.Color.Silver;
-            this.Logs.Location = new System.Drawing.Point(6, 590);
+            this.Logs.Location = new System.Drawing.Point(8, 726);
+            this.Logs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Logs.Name = "Logs";
-            this.Logs.Size = new System.Drawing.Size(72, 26);
+            this.Logs.Size = new System.Drawing.Size(92, 33);
             this.Logs.TabIndex = 67;
             this.Logs.Text = "Verlauf";
             this.Logs.Click += new System.EventHandler(this.Settings_Click);
@@ -892,9 +941,10 @@
             this.CurMode.BackColor = System.Drawing.Color.Transparent;
             this.CurMode.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurMode.ForeColor = System.Drawing.Color.Silver;
-            this.CurMode.Location = new System.Drawing.Point(294, 45);
+            this.CurMode.Location = new System.Drawing.Point(392, 55);
+            this.CurMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CurMode.Name = "CurMode";
-            this.CurMode.Size = new System.Drawing.Size(375, 28);
+            this.CurMode.Size = new System.Drawing.Size(500, 34);
             this.CurMode.TabIndex = 66;
             this.CurMode.Text = "Einfacher Modus";
             // 
@@ -905,10 +955,10 @@
             this.bProz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bProz.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bProz.ForeColor = System.Drawing.Color.Gray;
-            this.bProz.Location = new System.Drawing.Point(782, 213);
+            this.bProz.Location = new System.Drawing.Point(1043, 262);
             this.bProz.Margin = new System.Windows.Forms.Padding(0);
             this.bProz.Name = "bProz";
-            this.bProz.Size = new System.Drawing.Size(84, 80);
+            this.bProz.Size = new System.Drawing.Size(112, 98);
             this.bProz.TabIndex = 65;
             this.bProz.Text = "%";
             this.bProz.UseMnemonic = false;
@@ -923,10 +973,10 @@
             this.bAns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bAns.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAns.ForeColor = System.Drawing.Color.Gray;
-            this.bAns.Location = new System.Drawing.Point(688, 213);
+            this.bAns.Location = new System.Drawing.Point(917, 262);
             this.bAns.Margin = new System.Windows.Forms.Padding(0);
             this.bAns.Name = "bAns";
-            this.bAns.Size = new System.Drawing.Size(84, 80);
+            this.bAns.Size = new System.Drawing.Size(112, 98);
             this.bAns.TabIndex = 64;
             this.bAns.Text = "Ans";
             this.bAns.UseMnemonic = false;
@@ -939,9 +989,10 @@
             this.Ergebnis2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
             this.Ergebnis2.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ergebnis2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Ergebnis2.Location = new System.Drawing.Point(294, 142);
+            this.Ergebnis2.Location = new System.Drawing.Point(392, 175);
+            this.Ergebnis2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Ergebnis2.Name = "Ergebnis2";
-            this.Ergebnis2.Size = new System.Drawing.Size(572, 60);
+            this.Ergebnis2.Size = new System.Drawing.Size(763, 74);
             this.Ergebnis2.TabIndex = 63;
             // 
             // bBack
@@ -951,10 +1002,10 @@
             this.bBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bBack.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBack.ForeColor = System.Drawing.Color.Gray;
-            this.bBack.Location = new System.Drawing.Point(294, 303);
+            this.bBack.Location = new System.Drawing.Point(392, 373);
             this.bBack.Margin = new System.Windows.Forms.Padding(0);
             this.bBack.Name = "bBack";
-            this.bBack.Size = new System.Drawing.Size(84, 80);
+            this.bBack.Size = new System.Drawing.Size(112, 98);
             this.bBack.TabIndex = 62;
             this.bBack.Text = "←";
             this.bBack.UseMnemonic = false;
@@ -969,10 +1020,10 @@
             this.bC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bC.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bC.ForeColor = System.Drawing.Color.Gray;
-            this.bC.Location = new System.Drawing.Point(294, 392);
+            this.bC.Location = new System.Drawing.Point(392, 482);
             this.bC.Margin = new System.Windows.Forms.Padding(0);
             this.bC.Name = "bC";
-            this.bC.Size = new System.Drawing.Size(84, 80);
+            this.bC.Size = new System.Drawing.Size(112, 98);
             this.bC.TabIndex = 61;
             this.bC.Text = "CE";
             this.bC.UseMnemonic = false;
@@ -986,10 +1037,10 @@
             this.bCA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCA.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bCA.Location = new System.Drawing.Point(294, 481);
+            this.bCA.Location = new System.Drawing.Point(392, 592);
             this.bCA.Margin = new System.Windows.Forms.Padding(0);
             this.bCA.Name = "bCA";
-            this.bCA.Size = new System.Drawing.Size(84, 80);
+            this.bCA.Size = new System.Drawing.Size(112, 98);
             this.bCA.TabIndex = 60;
             this.bCA.Text = "C";
             this.bCA.UseMnemonic = false;
@@ -1001,9 +1052,10 @@
             this.Ergebnis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
             this.Ergebnis.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ergebnis.ForeColor = System.Drawing.Color.Silver;
-            this.Ergebnis.Location = new System.Drawing.Point(294, 82);
+            this.Ergebnis.Location = new System.Drawing.Point(392, 101);
+            this.Ergebnis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Ergebnis.Name = "Ergebnis";
-            this.Ergebnis.Size = new System.Drawing.Size(572, 60);
+            this.Ergebnis.Size = new System.Drawing.Size(763, 74);
             this.Ergebnis.TabIndex = 59;
             this.Ergebnis.Text = "ausgabe";
             // 
@@ -1014,10 +1066,10 @@
             this.bPunkt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bPunkt.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPunkt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bPunkt.Location = new System.Drawing.Point(585, 481);
+            this.bPunkt.Location = new System.Drawing.Point(780, 592);
             this.bPunkt.Margin = new System.Windows.Forms.Padding(0);
             this.bPunkt.Name = "bPunkt";
-            this.bPunkt.Size = new System.Drawing.Size(84, 80);
+            this.bPunkt.Size = new System.Drawing.Size(112, 98);
             this.bPunkt.TabIndex = 57;
             this.bPunkt.Text = ".";
             this.bPunkt.UseMnemonic = false;
@@ -1031,10 +1083,10 @@
             this.b00.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b00.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b00.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b00.Location = new System.Drawing.Point(492, 481);
+            this.b00.Location = new System.Drawing.Point(656, 592);
             this.b00.Margin = new System.Windows.Forms.Padding(0);
             this.b00.Name = "b00";
-            this.b00.Size = new System.Drawing.Size(84, 80);
+            this.b00.Size = new System.Drawing.Size(112, 98);
             this.b00.TabIndex = 56;
             this.b00.Text = "00";
             this.b00.UseMnemonic = false;
@@ -1048,10 +1100,10 @@
             this.bErg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bErg.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bErg.ForeColor = System.Drawing.Color.Silver;
-            this.bErg.Location = new System.Drawing.Point(782, 481);
+            this.bErg.Location = new System.Drawing.Point(1043, 592);
             this.bErg.Margin = new System.Windows.Forms.Padding(0);
             this.bErg.Name = "bErg";
-            this.bErg.Size = new System.Drawing.Size(84, 80);
+            this.bErg.Size = new System.Drawing.Size(112, 98);
             this.bErg.TabIndex = 55;
             this.bErg.Text = "=";
             this.bErg.UseMnemonic = false;
@@ -1065,10 +1117,10 @@
             this.bGeteilt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bGeteilt.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bGeteilt.ForeColor = System.Drawing.Color.Silver;
-            this.bGeteilt.Location = new System.Drawing.Point(782, 303);
+            this.bGeteilt.Location = new System.Drawing.Point(1043, 373);
             this.bGeteilt.Margin = new System.Windows.Forms.Padding(0);
             this.bGeteilt.Name = "bGeteilt";
-            this.bGeteilt.Size = new System.Drawing.Size(84, 80);
+            this.bGeteilt.Size = new System.Drawing.Size(112, 98);
             this.bGeteilt.TabIndex = 54;
             this.bGeteilt.Text = "÷";
             this.bGeteilt.UseMnemonic = false;
@@ -1082,10 +1134,10 @@
             this.bPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bPlus.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPlus.ForeColor = System.Drawing.Color.Silver;
-            this.bPlus.Location = new System.Drawing.Point(688, 392);
+            this.bPlus.Location = new System.Drawing.Point(917, 482);
             this.bPlus.Margin = new System.Windows.Forms.Padding(0);
             this.bPlus.Name = "bPlus";
-            this.bPlus.Size = new System.Drawing.Size(84, 169);
+            this.bPlus.Size = new System.Drawing.Size(112, 208);
             this.bPlus.TabIndex = 53;
             this.bPlus.Text = "+";
             this.bPlus.UseMnemonic = false;
@@ -1099,10 +1151,10 @@
             this.bMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bMinus.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bMinus.ForeColor = System.Drawing.Color.Silver;
-            this.bMinus.Location = new System.Drawing.Point(782, 392);
+            this.bMinus.Location = new System.Drawing.Point(1043, 482);
             this.bMinus.Margin = new System.Windows.Forms.Padding(0);
             this.bMinus.Name = "bMinus";
-            this.bMinus.Size = new System.Drawing.Size(84, 80);
+            this.bMinus.Size = new System.Drawing.Size(112, 98);
             this.bMinus.TabIndex = 52;
             this.bMinus.Text = "-";
             this.bMinus.UseMnemonic = false;
@@ -1116,10 +1168,10 @@
             this.bMal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bMal.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bMal.ForeColor = System.Drawing.Color.Silver;
-            this.bMal.Location = new System.Drawing.Point(688, 303);
+            this.bMal.Location = new System.Drawing.Point(917, 373);
             this.bMal.Margin = new System.Windows.Forms.Padding(0);
             this.bMal.Name = "bMal";
-            this.bMal.Size = new System.Drawing.Size(84, 80);
+            this.bMal.Size = new System.Drawing.Size(112, 98);
             this.bMal.TabIndex = 51;
             this.bMal.Text = "x";
             this.bMal.UseMnemonic = false;
@@ -1133,10 +1185,10 @@
             this.b0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b0.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b0.Location = new System.Drawing.Point(398, 481);
+            this.b0.Location = new System.Drawing.Point(531, 592);
             this.b0.Margin = new System.Windows.Forms.Padding(0);
             this.b0.Name = "b0";
-            this.b0.Size = new System.Drawing.Size(84, 80);
+            this.b0.Size = new System.Drawing.Size(112, 98);
             this.b0.TabIndex = 50;
             this.b0.Text = "0";
             this.b0.UseMnemonic = false;
@@ -1150,10 +1202,10 @@
             this.b3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b3.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b3.Location = new System.Drawing.Point(585, 392);
+            this.b3.Location = new System.Drawing.Point(780, 482);
             this.b3.Margin = new System.Windows.Forms.Padding(0);
             this.b3.Name = "b3";
-            this.b3.Size = new System.Drawing.Size(84, 80);
+            this.b3.Size = new System.Drawing.Size(112, 98);
             this.b3.TabIndex = 48;
             this.b3.Tag = "";
             this.b3.Text = "3";
@@ -1168,10 +1220,10 @@
             this.b6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b6.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b6.Location = new System.Drawing.Point(585, 303);
+            this.b6.Location = new System.Drawing.Point(780, 373);
             this.b6.Margin = new System.Windows.Forms.Padding(0);
             this.b6.Name = "b6";
-            this.b6.Size = new System.Drawing.Size(84, 80);
+            this.b6.Size = new System.Drawing.Size(112, 98);
             this.b6.TabIndex = 47;
             this.b6.Text = "6";
             this.b6.UseMnemonic = false;
@@ -1185,10 +1237,10 @@
             this.b9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b9.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b9.Location = new System.Drawing.Point(585, 214);
+            this.b9.Location = new System.Drawing.Point(780, 263);
             this.b9.Margin = new System.Windows.Forms.Padding(0);
             this.b9.Name = "b9";
-            this.b9.Size = new System.Drawing.Size(84, 80);
+            this.b9.Size = new System.Drawing.Size(112, 98);
             this.b9.TabIndex = 46;
             this.b9.Text = "9";
             this.b9.UseMnemonic = false;
@@ -1202,10 +1254,10 @@
             this.b2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b2.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b2.Location = new System.Drawing.Point(492, 392);
+            this.b2.Location = new System.Drawing.Point(656, 482);
             this.b2.Margin = new System.Windows.Forms.Padding(0);
             this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(84, 80);
+            this.b2.Size = new System.Drawing.Size(112, 98);
             this.b2.TabIndex = 45;
             this.b2.Text = "2";
             this.b2.UseMnemonic = false;
@@ -1219,10 +1271,10 @@
             this.b5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b5.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b5.Location = new System.Drawing.Point(492, 303);
+            this.b5.Location = new System.Drawing.Point(656, 373);
             this.b5.Margin = new System.Windows.Forms.Padding(0);
             this.b5.Name = "b5";
-            this.b5.Size = new System.Drawing.Size(84, 80);
+            this.b5.Size = new System.Drawing.Size(112, 98);
             this.b5.TabIndex = 44;
             this.b5.Text = "5";
             this.b5.UseMnemonic = false;
@@ -1236,10 +1288,10 @@
             this.b8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b8.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b8.Location = new System.Drawing.Point(492, 214);
+            this.b8.Location = new System.Drawing.Point(656, 263);
             this.b8.Margin = new System.Windows.Forms.Padding(0);
             this.b8.Name = "b8";
-            this.b8.Size = new System.Drawing.Size(84, 80);
+            this.b8.Size = new System.Drawing.Size(112, 98);
             this.b8.TabIndex = 43;
             this.b8.Text = "8";
             this.b8.UseMnemonic = false;
@@ -1254,10 +1306,10 @@
             this.b1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b1.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b1.Location = new System.Drawing.Point(398, 392);
+            this.b1.Location = new System.Drawing.Point(531, 482);
             this.b1.Margin = new System.Windows.Forms.Padding(0);
             this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(84, 80);
+            this.b1.Size = new System.Drawing.Size(112, 98);
             this.b1.TabIndex = 42;
             this.b1.Text = "1";
             this.b1.UseMnemonic = false;
@@ -1271,10 +1323,10 @@
             this.b4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b4.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b4.Location = new System.Drawing.Point(398, 303);
+            this.b4.Location = new System.Drawing.Point(531, 373);
             this.b4.Margin = new System.Windows.Forms.Padding(0);
             this.b4.Name = "b4";
-            this.b4.Size = new System.Drawing.Size(84, 80);
+            this.b4.Size = new System.Drawing.Size(112, 98);
             this.b4.TabIndex = 41;
             this.b4.Text = "4";
             this.b4.UseMnemonic = false;
@@ -1288,10 +1340,10 @@
             this.b7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b7.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.b7.Location = new System.Drawing.Point(398, 213);
+            this.b7.Location = new System.Drawing.Point(531, 262);
             this.b7.Margin = new System.Windows.Forms.Padding(0);
             this.b7.Name = "b7";
-            this.b7.Size = new System.Drawing.Size(84, 80);
+            this.b7.Size = new System.Drawing.Size(112, 98);
             this.b7.TabIndex = 40;
             this.b7.Text = "7";
             this.b7.UseMnemonic = false;
@@ -1305,9 +1357,10 @@
             this.Settings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Settings.ForeColor = System.Drawing.Color.Silver;
-            this.Settings.Location = new System.Drawing.Point(1018, 590);
+            this.Settings.Location = new System.Drawing.Point(1357, 726);
+            this.Settings.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(126, 26);
+            this.Settings.Size = new System.Drawing.Size(161, 33);
             this.Settings.TabIndex = 0;
             this.Settings.Text = "Einstellungen";
             this.Settings.Click += new System.EventHandler(this.Settings_Click);
@@ -1318,13 +1371,13 @@
             this.Main.Controls.Add(this.SettingsPage);
             this.Main.Controls.Add(this.LogsPage);
             this.Main.Controls.Add(this.Admin);
-            this.Main.Location = new System.Drawing.Point(-5, -3);
+            this.Main.Location = new System.Drawing.Point(-7, -4);
             this.Main.Margin = new System.Windows.Forms.Padding(0);
             this.Main.Multiline = true;
             this.Main.Name = "Main";
             this.Main.Padding = new System.Drawing.Point(0, 0);
             this.Main.SelectedIndex = 0;
-            this.Main.Size = new System.Drawing.Size(1158, 654);
+            this.Main.Size = new System.Drawing.Size(1544, 805);
             this.Main.TabIndex = 0;
             // 
             // Admin
@@ -1335,10 +1388,11 @@
             this.Admin.Controls.Add(this.label4);
             this.Admin.Controls.Add(this.AdSite);
             this.Admin.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin.Location = new System.Drawing.Point(4, 22);
+            this.Admin.Location = new System.Drawing.Point(4, 25);
+            this.Admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Admin.Name = "Admin";
-            this.Admin.Padding = new System.Windows.Forms.Padding(3);
-            this.Admin.Size = new System.Drawing.Size(1150, 628);
+            this.Admin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Admin.Size = new System.Drawing.Size(1536, 776);
             this.Admin.TabIndex = 4;
             this.Admin.Text = "experimental";
             // 
@@ -1347,16 +1401,18 @@
             this.Uhrzeitlbl4.BackColor = System.Drawing.Color.Transparent;
             this.Uhrzeitlbl4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Uhrzeitlbl4.ForeColor = System.Drawing.Color.Silver;
-            this.Uhrzeitlbl4.Location = new System.Drawing.Point(3, 596);
+            this.Uhrzeitlbl4.Location = new System.Drawing.Point(4, 734);
+            this.Uhrzeitlbl4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Uhrzeitlbl4.Name = "Uhrzeitlbl4";
-            this.Uhrzeitlbl4.Size = new System.Drawing.Size(94, 28);
+            this.Uhrzeitlbl4.Size = new System.Drawing.Size(125, 34);
             this.Uhrzeitlbl4.TabIndex = 91;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(1084, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(1445, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 62);
+            this.pictureBox4.Size = new System.Drawing.Size(80, 76);
             this.pictureBox4.TabIndex = 70;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.SetZumRech_Click);
@@ -1367,9 +1423,10 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(6, 3);
+            this.label4.Location = new System.Drawing.Point(8, 4);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 45);
+            this.label4.Size = new System.Drawing.Size(68, 58);
             this.label4.TabIndex = 6;
             this.label4.Text = "←";
             this.label4.Click += new System.EventHandler(this.SetZumRech_Click);
@@ -1379,9 +1436,10 @@
             this.AdSite.AutoSize = true;
             this.AdSite.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdSite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdSite.Location = new System.Drawing.Point(467, 0);
+            this.AdSite.Location = new System.Drawing.Point(623, 0);
+            this.AdSite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AdSite.Name = "AdSite";
-            this.AdSite.Size = new System.Drawing.Size(217, 45);
+            this.AdSite.Size = new System.Drawing.Size(278, 58);
             this.AdSite.TabIndex = 5;
             this.AdSite.Text = "Experimental";
             // 
@@ -1400,15 +1458,34 @@
             // 
             this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
             // 
+            // bBruch
+            // 
+            this.bBruch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.bBruch.FlatAppearance.BorderSize = 0;
+            this.bBruch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bBruch.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBruch.ForeColor = System.Drawing.Color.Gray;
+            this.bBruch.Location = new System.Drawing.Point(265, 262);
+            this.bBruch.Margin = new System.Windows.Forms.Padding(0);
+            this.bBruch.Name = "bBruch";
+            this.bBruch.Size = new System.Drawing.Size(112, 98);
+            this.bBruch.TabIndex = 71;
+            this.bBruch.Text = "½";
+            this.bBruch.UseMnemonic = false;
+            this.bBruch.UseVisualStyleBackColor = false;
+            this.bBruch.Visible = false;
+            this.bBruch.Click += new System.EventHandler(this.bBruch_Click);
+            // 
             // Tischrechner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1148, 645);
+            this.ClientSize = new System.Drawing.Size(1531, 794);
             this.Controls.Add(this.Main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Tischrechner";
             this.Text = "Tischrechner Janzen";
@@ -1520,6 +1597,7 @@
         private System.Windows.Forms.Label hiernichts;
         private System.Windows.Forms.Label aktfarbe;
         private System.Windows.Forms.TrackBar rgbBar;
+        private System.Windows.Forms.Button bBruch;
     }
 }
 
