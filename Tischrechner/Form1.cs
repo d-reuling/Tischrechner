@@ -856,5 +856,30 @@ namespace Tischrechner
                 Rechnungen.Items.Clear();
             }
         }
+
+        private void bvar1_Click(object sender, EventArgs e)
+        {
+            float currentsize = 0;
+            int varlength = 0;
+
+            if (sender == bvar1)
+            {
+                bvar1.Text = "100000000";
+                string leng = bvar1.Text;
+                varlength = leng.Length;
+                while (varlength >= 2)
+                {
+                    currentsize = bvar1.Font.SizeInPoints;
+                    currentsize -= 1;
+                    varlength -= 2;
+                }
+
+            }
+            else if (sender == bvar2)
+            {
+                bvar2.Text = "2";
+            }
+           
+        }
     }
 }
