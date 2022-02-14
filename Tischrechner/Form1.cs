@@ -27,6 +27,21 @@ namespace Tischrechner
             InitializeComponent();
         }
 
+        public void Quersumme()
+        {
+            string summe = Ergebnis2.Text; //TextBoxErgebnis hohlen
+            int number = 0;
+
+            foreach (char num in summe.ToCharArray()) //Aufsplitten und einzeln durchgehen
+            {
+                if (num == ' ' || num == '.' || num == ',') //Bei ungültigen Zeichen den Rechneprozess übersüringen
+                    continue;
+
+                number = number + int.Parse(num.ToString()); //Zahl umwandeln und zusammenrechnen
+            }
+            Ergebnis2.Text = number.ToString(); //TextBoxErgebnis zurückgeben
+        }
+
         private void Settings_Click(object sender, EventArgs e)
         {
             if (sender == Settings || sender == SettLog)
@@ -157,6 +172,10 @@ namespace Tischrechner
                     if (!EasyMd.Checked)
                         Re.CurOperator = null;
                 }
+            }
+            if(sender == bQS)
+            {
+                Quersumme();
             }
 
             //

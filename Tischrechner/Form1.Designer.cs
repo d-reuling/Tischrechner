@@ -117,6 +117,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
+            this.bQS = new System.Windows.Forms.Button();
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -799,6 +800,7 @@
             // RechnerPage
             // 
             this.RechnerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.RechnerPage.Controls.Add(this.bQS);
             this.RechnerPage.Controls.Add(this.Uhrzeitlbl);
             this.RechnerPage.Controls.Add(this.pictureBox1);
             this.RechnerPage.Controls.Add(this.bNeg);
@@ -1400,6 +1402,23 @@
             // 
             this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
             // 
+            // bQS
+            // 
+            this.bQS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.bQS.FlatAppearance.BorderSize = 0;
+            this.bQS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bQS.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bQS.ForeColor = System.Drawing.Color.Silver;
+            this.bQS.Location = new System.Drawing.Point(878, 214);
+            this.bQS.Margin = new System.Windows.Forms.Padding(0);
+            this.bQS.Name = "bQS";
+            this.bQS.Size = new System.Drawing.Size(84, 80);
+            this.bQS.TabIndex = 71;
+            this.bQS.Text = "QS";
+            this.bQS.UseMnemonic = false;
+            this.bQS.UseVisualStyleBackColor = false;
+            this.bQS.Click += new System.EventHandler(this.bZahlenfeld_Click);
+            // 
             // Tischrechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1520,6 +1539,7 @@
         private System.Windows.Forms.Label hiernichts;
         private System.Windows.Forms.Label aktfarbe;
         private System.Windows.Forms.TrackBar rgbBar;
+        private System.Windows.Forms.Button bQS;
     }
 }
 
