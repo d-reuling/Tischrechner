@@ -78,6 +78,8 @@
             this.AutoSaveBox = new System.Windows.Forms.CheckBox();
             this.DarkModeBox = new System.Windows.Forms.CheckBox();
             this.RechnerPage = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bPotenz = new System.Windows.Forms.Button();
             this.Uhrzeitlbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bNeg = new System.Windows.Forms.Button();
@@ -117,6 +119,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -799,6 +802,8 @@
             // RechnerPage
             // 
             this.RechnerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.RechnerPage.Controls.Add(this.button1);
+            this.RechnerPage.Controls.Add(this.bPotenz);
             this.RechnerPage.Controls.Add(this.Uhrzeitlbl);
             this.RechnerPage.Controls.Add(this.pictureBox1);
             this.RechnerPage.Controls.Add(this.bNeg);
@@ -836,6 +841,39 @@
             this.RechnerPage.Size = new System.Drawing.Size(1150, 628);
             this.RechnerPage.TabIndex = 0;
             this.RechnerPage.Text = "calculator";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Silver;
+            this.button1.Location = new System.Drawing.Point(875, 392);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 169);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Potenz";
+            this.button1.UseMnemonic = false;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // bPotenz
+            // 
+            this.bPotenz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.bPotenz.FlatAppearance.BorderSize = 0;
+            this.bPotenz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bPotenz.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPotenz.ForeColor = System.Drawing.Color.Silver;
+            this.bPotenz.Location = new System.Drawing.Point(875, 213);
+            this.bPotenz.Margin = new System.Windows.Forms.Padding(0);
+            this.bPotenz.Name = "bPotenz";
+            this.bPotenz.Size = new System.Drawing.Size(84, 170);
+            this.bPotenz.TabIndex = 71;
+            this.bPotenz.Text = "Basis";
+            this.bPotenz.UseMnemonic = false;
+            this.bPotenz.UseVisualStyleBackColor = false;
+            this.bPotenz.Click += new System.EventHandler(this.bPotenz_Click);
             // 
             // Uhrzeitlbl
             // 
@@ -941,7 +979,7 @@
             this.Ergebnis2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Ergebnis2.Location = new System.Drawing.Point(294, 142);
             this.Ergebnis2.Name = "Ergebnis2";
-            this.Ergebnis2.Size = new System.Drawing.Size(572, 60);
+            this.Ergebnis2.Size = new System.Drawing.Size(665, 60);
             this.Ergebnis2.TabIndex = 63;
             // 
             // bBack
@@ -1003,7 +1041,7 @@
             this.Ergebnis.ForeColor = System.Drawing.Color.Silver;
             this.Ergebnis.Location = new System.Drawing.Point(294, 82);
             this.Ergebnis.Name = "Ergebnis";
-            this.Ergebnis.Size = new System.Drawing.Size(572, 60);
+            this.Ergebnis.Size = new System.Drawing.Size(665, 60);
             this.Ergebnis.TabIndex = 59;
             this.Ergebnis.Text = "ausgabe";
             // 
@@ -1520,6 +1558,9 @@
         private System.Windows.Forms.Label hiernichts;
         private System.Windows.Forms.Label aktfarbe;
         private System.Windows.Forms.TrackBar rgbBar;
+        private System.Windows.Forms.Button bPotenz;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -856,5 +856,16 @@ namespace Tischrechner
                 Rechnungen.Items.Clear();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bPotenz_Click(object sender, EventArgs e)
+        {
+            //  new Form = new Form 4;
+        }
+
     }
 }
