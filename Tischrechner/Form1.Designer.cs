@@ -117,6 +117,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -127,6 +133,8 @@
             this.Main.SuspendLayout();
             this.Admin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // LogsPage
@@ -799,6 +807,7 @@
             // RechnerPage
             // 
             this.RechnerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.RechnerPage.Controls.Add(this.button1);
             this.RechnerPage.Controls.Add(this.Uhrzeitlbl);
             this.RechnerPage.Controls.Add(this.pictureBox1);
             this.RechnerPage.Controls.Add(this.bNeg);
@@ -905,7 +914,7 @@
             this.bProz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bProz.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bProz.ForeColor = System.Drawing.Color.Gray;
-            this.bProz.Location = new System.Drawing.Point(782, 213);
+            this.bProz.Location = new System.Drawing.Point(782, 218);
             this.bProz.Margin = new System.Windows.Forms.Padding(0);
             this.bProz.Name = "bProz";
             this.bProz.Size = new System.Drawing.Size(84, 80);
@@ -1318,6 +1327,7 @@
             this.Main.Controls.Add(this.SettingsPage);
             this.Main.Controls.Add(this.LogsPage);
             this.Main.Controls.Add(this.Admin);
+            this.Main.Controls.Add(this.tabPage1);
             this.Main.Location = new System.Drawing.Point(-5, -3);
             this.Main.Margin = new System.Windows.Forms.Padding(0);
             this.Main.Multiline = true;
@@ -1400,6 +1410,72 @@
             // 
             this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(889, 481);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(62, 80);
+            this.button1.TabIndex = 71;
+            this.button1.Text = "√";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.bZahlenfeld_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.pictureBox5);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1150, 628);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "experimental";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(3, 596);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 28);
+            this.label6.TabIndex = 91;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(1084, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(60, 62);
+            this.pictureBox5.TabIndex = 70;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.Location = new System.Drawing.Point(6, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 45);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "←";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label8.Location = new System.Drawing.Point(467, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(221, 45);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Wurzelziehen";
+            // 
             // Tischrechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1427,6 +1503,9 @@
             this.Admin.ResumeLayout(false);
             this.Admin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1520,6 +1599,12 @@
         private System.Windows.Forms.Label hiernichts;
         private System.Windows.Forms.Label aktfarbe;
         private System.Windows.Forms.TrackBar rgbBar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 

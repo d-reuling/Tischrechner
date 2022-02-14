@@ -121,6 +121,18 @@ namespace Tischrechner
                     Zahl.AddFirst(Erg + " ");
                     AnsWert = Erg;
                 }
+                else
+                if (Operator.Peek() == "√")
+                {
+                    Operator.Dequeue();
+                    Dig1 = Convert.ToDouble(Zahl.First());
+                    Zahl.RemoveFirst();
+                    Dig2 = Convert.ToDouble(Zahl.First());
+                    Zahl.RemoveFirst();
+                    Erg = Convert.ToString(Dig1 * Dig2);
+                    Zahl.AddFirst(Erg + " ");
+                    AnsWert = Erg;
+                }
             }
 
             Zahl.Clear();
@@ -141,7 +153,7 @@ namespace Tischrechner
 
                 foreach (string s in Arr)
                 {
-                    if (s == "+" || s == "-" || s == "x" || s == "÷" || s == "%")
+                    if (s == "+" || s == "-" || s == "x" || s == "÷" || s == "%" || s == "√")
                         Operator.Enqueue(s);
                     else
                         Zahl.AddLast(s);
@@ -171,7 +183,7 @@ namespace Tischrechner
                     if (Operator.Count >= 1)
                     {
                         //Wenn der nächste Operator ein Punkt-Operator ist, muss dieser zuerst gerechnet werden.
-                        if (Operator.Peek() == "x" || Operator.Peek() == "÷" || Operator.Peek() == "%")
+                        if (Operator.Peek() == "x" || Operator.Peek() == "÷" || Operator.Peek() == "%" || Operator.Peek() == "%")
                         {
                             if (Operator.Peek() == "x")
                             {
