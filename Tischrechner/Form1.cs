@@ -22,6 +22,8 @@ namespace Tischrechner
         int b = 240;
         int wo = 0;
 
+        bool check = true;
+
         public Tischrechner()
         {
             InitializeComponent();
@@ -854,6 +856,34 @@ namespace Tischrechner
                 pathCreate.Visible = false;
                 Re.SaveData.Clear();
                 Rechnungen.Items.Clear();
+            }
+        }
+
+        private void B_Yuan_Click(object sender, EventArgs e)
+        {
+
+            if (check == true)
+            {
+                Double test = 0;
+                string ergtest;
+                test = Convert.ToDouble(Ergebnis2.Text);
+                test = test * 7.21;
+                ergtest = Convert.ToString(test);
+                Ergebnis2.Text = ergtest;
+                check = false;
+                euroyuan.Text = "¥";
+            }
+            else if (check == false)
+            {
+                Double test = 0;
+                string ergtest;
+                test = Convert.ToDouble(Ergebnis2.Text);
+                test = test / 7.21;
+                ergtest = Convert.ToString(test);
+                Ergebnis2.Text = ergtest;
+                check = true;
+                euroyuan.Text = "€";
+                //Janzen ist sehr nice 
             }
         }
     }
