@@ -117,6 +117,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
+            this.B_Yuan = new System.Windows.Forms.Button();
+            this.euroyuan = new System.Windows.Forms.Label();
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -799,6 +801,8 @@
             // RechnerPage
             // 
             this.RechnerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.RechnerPage.Controls.Add(this.euroyuan);
+            this.RechnerPage.Controls.Add(this.B_Yuan);
             this.RechnerPage.Controls.Add(this.Uhrzeitlbl);
             this.RechnerPage.Controls.Add(this.pictureBox1);
             this.RechnerPage.Controls.Add(this.bNeg);
@@ -1400,6 +1404,32 @@
             // 
             this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
             // 
+            // B_Yuan
+            // 
+            this.B_Yuan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.B_Yuan.FlatAppearance.BorderSize = 0;
+            this.B_Yuan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B_Yuan.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B_Yuan.ForeColor = System.Drawing.Color.Silver;
+            this.B_Yuan.Location = new System.Drawing.Point(880, 392);
+            this.B_Yuan.Margin = new System.Windows.Forms.Padding(0);
+            this.B_Yuan.Name = "B_Yuan";
+            this.B_Yuan.Size = new System.Drawing.Size(105, 80);
+            this.B_Yuan.TabIndex = 72;
+            this.B_Yuan.Text = "Y/E";
+            this.B_Yuan.UseMnemonic = false;
+            this.B_Yuan.UseVisualStyleBackColor = false;
+            this.B_Yuan.Click += new System.EventHandler(this.B_Yuan_Click);
+            // 
+            // euroyuan
+            // 
+            this.euroyuan.AutoSize = true;
+            this.euroyuan.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.euroyuan.Location = new System.Drawing.Point(880, 142);
+            this.euroyuan.Name = "euroyuan";
+            this.euroyuan.Size = new System.Drawing.Size(0, 59);
+            this.euroyuan.TabIndex = 73;
+            // 
             // Tischrechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1520,6 +1550,8 @@
         private System.Windows.Forms.Label hiernichts;
         private System.Windows.Forms.Label aktfarbe;
         private System.Windows.Forms.TrackBar rgbBar;
+        private System.Windows.Forms.Label euroyuan;
+        private System.Windows.Forms.Button B_Yuan;
     }
 }
 
