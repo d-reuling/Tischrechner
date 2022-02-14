@@ -96,7 +96,9 @@ namespace Tischrechner
                     Erg = Convert.ToString(Dig1 * Dig2);
                     Zahl.AddFirst(Erg + " ");
                     AnsWert = Erg;
-                }
+                }//lol
+                //lol2
+                //lol3
                 else
                 if (Operator.Peek() == "÷")
                 {

@@ -856,5 +856,15 @@ namespace Tischrechner
                 Rechnungen.Items.Clear();
             }
         }
+
+        private void BR_Click(object sender, EventArgs e)//ergeniss wird gerundet
+        {
+            if(!EasyMd.Checked)
+                {
+               Ergebnis2.Text =  Convert.ToString(Math.Round(Convert.ToDouble(Ergebnis2.Text), 2));
+            }
+
+                
+        }
     }
 }
