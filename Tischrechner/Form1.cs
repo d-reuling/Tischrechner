@@ -12,6 +12,8 @@ using System.Windows.Forms;
 namespace Tischrechner
 {
     public partial class Tischrechner : Form
+
+        //zum testen
     {
         Rechnung Re = new Rechnung(); //Rechnungsklasse implementieren
         bool AnsUsed = false; //Ans genutzt?
