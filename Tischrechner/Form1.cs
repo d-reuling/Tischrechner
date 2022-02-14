@@ -286,6 +286,18 @@ namespace Tischrechner
                     Negierung = false;
                 }
             }
+
+           if (sender == bMwSt)
+            { 
+                if (Re.CurOperator == null && Re.CurDigit != null)
+                {
+                    Re.CurInvoice = Re.CurInvoice + " MwSt ";
+                    Re.CurInv.AddLast(" MwSt ");
+                    Re.CurDigit = null;
+                    AnsUsed = false;
+                    Negierung = false;
+                }
+            }
             if (sender == bNeg)
             {
                 try
@@ -393,6 +405,7 @@ namespace Tischrechner
                 bAns.Visible = false;
                 bProz.Visible = false;
                 bNeg.Visible = false;
+                bMwSt.Visible = false;
 
 
                 CurMode.Text = "Einfacher Modus";
@@ -404,6 +417,7 @@ namespace Tischrechner
                 bAns.Visible = true;
                 bProz.Visible = true;
                 bNeg.Visible = true;
+                bMwSt.Visible = true;
                 EasyMdError.Visible = false;
 
                 CurMode.Text = "Erweiterter Modus: Ohne Punkt vor Strich";

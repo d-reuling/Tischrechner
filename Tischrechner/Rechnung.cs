@@ -49,6 +49,7 @@ namespace Tischrechner
 
             double Dig1 = 0;
             double Dig2 = 0;
+            double MwSt = 1.19;
 
             //wenn es noch mehr als einen Operator gibt, wird gerechnet.
             while (Operator.Count >= 1)
@@ -118,6 +119,16 @@ namespace Tischrechner
                     Dig2 = Convert.ToDouble(Zahl.First());
                     Zahl.RemoveFirst();
                     Erg = Convert.ToString(Dig1 * Dig2 / 100);
+                    Zahl.AddFirst(Erg + " ");
+                    AnsWert = Erg;
+                }
+                
+                if (Operator.Peek() == "MwSt")
+                {
+                    Operator.Dequeue();
+                    Dig1 = Convert.ToDouble(Zahl.First());
+                    Zahl.RemoveFirst();
+                    Erg = Convert.ToString(Dig1 * MwSt);
                     Zahl.AddFirst(Erg + " ");
                     AnsWert = Erg;
                 }

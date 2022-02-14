@@ -117,6 +117,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
+            this.bMwSt = new System.Windows.Forms.Button();
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -799,6 +800,7 @@
             // RechnerPage
             // 
             this.RechnerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.RechnerPage.Controls.Add(this.bMwSt);
             this.RechnerPage.Controls.Add(this.Uhrzeitlbl);
             this.RechnerPage.Controls.Add(this.pictureBox1);
             this.RechnerPage.Controls.Add(this.bNeg);
@@ -1400,6 +1402,23 @@
             // 
             this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
             // 
+            // bMwSt
+            // 
+            this.bMwSt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.bMwSt.FlatAppearance.BorderSize = 0;
+            this.bMwSt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bMwSt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bMwSt.ForeColor = System.Drawing.Color.Gray;
+            this.bMwSt.Location = new System.Drawing.Point(875, 213);
+            this.bMwSt.Margin = new System.Windows.Forms.Padding(0);
+            this.bMwSt.Name = "bMwSt";
+            this.bMwSt.Size = new System.Drawing.Size(84, 80);
+            this.bMwSt.TabIndex = 71;
+            this.bMwSt.Text = "MwSt";
+            this.bMwSt.UseMnemonic = false;
+            this.bMwSt.UseVisualStyleBackColor = false;
+            this.bMwSt.Visible = false;
+            // 
             // Tischrechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1520,6 +1539,7 @@
         private System.Windows.Forms.Label hiernichts;
         private System.Windows.Forms.Label aktfarbe;
         private System.Windows.Forms.TrackBar rgbBar;
+        private System.Windows.Forms.Button bMwSt;
     }
 }
 
