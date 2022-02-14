@@ -78,6 +78,7 @@
             this.AutoSaveBox = new System.Windows.Forms.CheckBox();
             this.DarkModeBox = new System.Windows.Forms.CheckBox();
             this.RechnerPage = new System.Windows.Forms.TabPage();
+            this.b_Pfund = new System.Windows.Forms.Button();
             this.Uhrzeitlbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bNeg = new System.Windows.Forms.Button();
@@ -117,6 +118,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
+            this.b_Pfund = new System.Windows.Forms.Button();
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -799,6 +801,7 @@
             // RechnerPage
             // 
             this.RechnerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.RechnerPage.Controls.Add(this.b_Pfund);
             this.RechnerPage.Controls.Add(this.Uhrzeitlbl);
             this.RechnerPage.Controls.Add(this.pictureBox1);
             this.RechnerPage.Controls.Add(this.bNeg);
@@ -837,6 +840,23 @@
             this.RechnerPage.TabIndex = 0;
             this.RechnerPage.Text = "calculator";
             // 
+            // b_Pfund
+            // 
+            this.b_Pfund.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.b_Pfund.FlatAppearance.BorderSize = 0;
+            this.b_Pfund.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b_Pfund.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_Pfund.ForeColor = System.Drawing.Color.Silver;
+            this.b_Pfund.Location = new System.Drawing.Point(895, 214);
+            this.b_Pfund.Margin = new System.Windows.Forms.Padding(0);
+            this.b_Pfund.Name = "b_Pfund";
+            this.b_Pfund.Size = new System.Drawing.Size(84, 80);
+            this.b_Pfund.TabIndex = 71;
+            this.b_Pfund.Text = "£";
+            this.b_Pfund.UseMnemonic = false;
+            this.b_Pfund.UseVisualStyleBackColor = false;
+            this.b_Pfund.Click += new System.EventHandler(this.b_Pfund_Click);
+            // 
             // Uhrzeitlbl
             // 
             this.Uhrzeitlbl.BackColor = System.Drawing.Color.Transparent;
@@ -849,7 +869,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1084, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(1084, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 62);
             this.pictureBox1.TabIndex = 69;
@@ -1400,6 +1420,23 @@
             // 
             this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
             // 
+            // b_Pfund
+            // 
+            this.b_Pfund.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.b_Pfund.FlatAppearance.BorderSize = 0;
+            this.b_Pfund.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b_Pfund.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_Pfund.ForeColor = System.Drawing.Color.Silver;
+            this.b_Pfund.Location = new System.Drawing.Point(916, 214);
+            this.b_Pfund.Margin = new System.Windows.Forms.Padding(0);
+            this.b_Pfund.Name = "b_Pfund";
+            this.b_Pfund.Size = new System.Drawing.Size(84, 80);
+            this.b_Pfund.TabIndex = 71;
+            this.b_Pfund.Text = "£";
+            this.b_Pfund.UseMnemonic = false;
+            this.b_Pfund.UseVisualStyleBackColor = false;
+            this.b_Pfund.Click += new System.EventHandler(this.b_Pfund_Click);
+            // 
             // Tischrechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1520,6 +1557,7 @@
         private System.Windows.Forms.Label hiernichts;
         private System.Windows.Forms.Label aktfarbe;
         private System.Windows.Forms.TrackBar rgbBar;
+        private System.Windows.Forms.Button b_Pfund;
     }
 }
 

@@ -856,5 +856,21 @@ namespace Tischrechner
                 Rechnungen.Items.Clear();
             }
         }
+        private void PfundinEuro(double Erg)
+        {
+            double wechselkurs = Erg * 0.16 * 10;
+            Erg = Convert.ToDouble( wechselkurs + "€");
+        }
+
+        private void EuroinPfund(double Erg)
+        {
+            double wechslekurs = Erg * 0.12 * 10;
+            Erg = Convert.ToDouble(wechslekurs + "€");
+        }
+
+        private void b_Pfund_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
