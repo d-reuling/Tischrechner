@@ -117,6 +117,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
+            this.BR = new System.Windows.Forms.Button();
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -799,6 +800,7 @@
             // RechnerPage
             // 
             this.RechnerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
+            this.RechnerPage.Controls.Add(this.BR);
             this.RechnerPage.Controls.Add(this.Uhrzeitlbl);
             this.RechnerPage.Controls.Add(this.pictureBox1);
             this.RechnerPage.Controls.Add(this.bNeg);
@@ -1400,6 +1402,23 @@
             // 
             this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
             // 
+            // BR
+            // 
+            this.BR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.BR.FlatAppearance.BorderSize = 0;
+            this.BR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BR.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BR.Location = new System.Drawing.Point(91, 214);
+            this.BR.Margin = new System.Windows.Forms.Padding(0);
+            this.BR.Name = "BR";
+            this.BR.Size = new System.Drawing.Size(192, 80);
+            this.BR.TabIndex = 71;
+            this.BR.Text = "Runden";
+            this.BR.UseMnemonic = false;
+            this.BR.UseVisualStyleBackColor = false;
+            this.BR.Click += new System.EventHandler(this.BR_Click);
+            // 
             // Tischrechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1520,6 +1539,7 @@
         private System.Windows.Forms.Label hiernichts;
         private System.Windows.Forms.Label aktfarbe;
         private System.Windows.Forms.TrackBar rgbBar;
+        private System.Windows.Forms.Button BR;
     }
 }
 
