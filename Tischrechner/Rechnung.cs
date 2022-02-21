@@ -128,7 +128,7 @@ namespace Tischrechner
             Dig1 = 0;
             Dig2 = 0;
 
-            return Erg;
+            return Erg;     //
         }
         public string PvS(string Rechnung)
         {
