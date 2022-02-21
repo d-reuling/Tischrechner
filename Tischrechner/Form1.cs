@@ -864,8 +864,13 @@ namespace Tischrechner
 
             if (sender == bvar1)
             {
-                bvar1.Text = "100000000";
-                string leng = bvar1.Text;
+                
+
+                string bvar1t = "10000000";
+
+                
+
+                string leng = bvar1t;
                 varlength = leng.Length;
                 while (varlength >= 2)
                 {
@@ -873,6 +878,10 @@ namespace Tischrechner
                     currentsize -= 1;
                     varlength -= 2;
                 }
+
+
+
+                bvar1.Text = bvar1t;
 
             }
             else if (sender == bvar2)
