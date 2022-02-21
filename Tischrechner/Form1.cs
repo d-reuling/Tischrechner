@@ -870,5 +870,10 @@ namespace Tischrechner
                 Rechnungen.Items.Clear();
             }
         }
+
+        private void bMwSt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

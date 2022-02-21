@@ -78,6 +78,7 @@
             this.AutoSaveBox = new System.Windows.Forms.CheckBox();
             this.DarkModeBox = new System.Windows.Forms.CheckBox();
             this.RechnerPage = new System.Windows.Forms.TabPage();
+            this.bMwSt = new System.Windows.Forms.Button();
             this.Uhrzeitlbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bNeg = new System.Windows.Forms.Button();
@@ -117,7 +118,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
-            this.bMwSt = new System.Windows.Forms.Button();
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -839,6 +839,24 @@
             this.RechnerPage.TabIndex = 0;
             this.RechnerPage.Text = "calculator";
             // 
+            // bMwSt
+            // 
+            this.bMwSt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.bMwSt.FlatAppearance.BorderSize = 0;
+            this.bMwSt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bMwSt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bMwSt.ForeColor = System.Drawing.Color.Gray;
+            this.bMwSt.Location = new System.Drawing.Point(875, 213);
+            this.bMwSt.Margin = new System.Windows.Forms.Padding(0);
+            this.bMwSt.Name = "bMwSt";
+            this.bMwSt.Size = new System.Drawing.Size(84, 80);
+            this.bMwSt.TabIndex = 71;
+            this.bMwSt.Text = "MwSt";
+            this.bMwSt.UseMnemonic = false;
+            this.bMwSt.UseVisualStyleBackColor = false;
+            this.bMwSt.Visible = false;
+            this.bMwSt.Click += new System.EventHandler(this.bMwSt_Click);
+            // 
             // Uhrzeitlbl
             // 
             this.Uhrzeitlbl.BackColor = System.Drawing.Color.Transparent;
@@ -1401,23 +1419,6 @@
             // rgbTimer
             // 
             this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
-            // 
-            // bMwSt
-            // 
-            this.bMwSt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
-            this.bMwSt.FlatAppearance.BorderSize = 0;
-            this.bMwSt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bMwSt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bMwSt.ForeColor = System.Drawing.Color.Gray;
-            this.bMwSt.Location = new System.Drawing.Point(875, 213);
-            this.bMwSt.Margin = new System.Windows.Forms.Padding(0);
-            this.bMwSt.Name = "bMwSt";
-            this.bMwSt.Size = new System.Drawing.Size(84, 80);
-            this.bMwSt.TabIndex = 71;
-            this.bMwSt.Text = "MwSt";
-            this.bMwSt.UseMnemonic = false;
-            this.bMwSt.UseVisualStyleBackColor = false;
-            this.bMwSt.Visible = false;
             // 
             // Tischrechner
             // 

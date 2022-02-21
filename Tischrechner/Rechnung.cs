@@ -9,7 +9,7 @@ namespace Tischrechner
     class Rechnung
     {
 
-        LinkedList<string> Zahl = new LinkedList<string>(); //Zahl LinkedList (Für PvS und OhnePvS)
+        LinkedList<string> Zahl = new LinkedList<string>(); //Zahl LinkedList bbbbbb (Für PvS und OhnePvS)
         Queue<string> Operator = new Queue<string>(); //Operatoren Queue (Für PvS und OhnePvS)
 
         public string CurDigit; //Aktuelle Zahl (Für Einfachen Modus)
