@@ -362,7 +362,7 @@ namespace Tischrechner
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(1199, 862);
+            this.ClientSize = new System.Drawing.Size(740, 768);
             this.Controls.Add(this.op);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
