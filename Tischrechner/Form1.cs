@@ -883,6 +883,7 @@ namespace Tischrechner
                 Ergebnis2.Text = ergtest;
                 check = true;
                 euroyuan.Text = "€";
+                //Janzen ist sehr nice 
             }
         }
     }
