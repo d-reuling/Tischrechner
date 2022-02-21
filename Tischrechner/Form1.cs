@@ -872,16 +872,29 @@ namespace Tischrechner
 
                 string leng = bvar1t;
                 varlength = leng.Length;
-                while (varlength >= 2)
+
+                if(varlength >= 3)
                 {
-                    currentsize = bvar1.Font.SizeInPoints;
-                    currentsize -= 1;
-                    varlength -= 2;
+                    for (int i = varlength, i >= 2, i-2)
+                    {
+                        currentsize = bvar1.Font.SizeInPoints;
+                        currentsize -= 1;
+                        varlength -= 2;
+                    }
+
+
+                    bvar1.Font = new Font("Calibri", currentsize);
+
+                    bvar1.Text = bvar1t;
+                }
+
+                else
+                {
+                    bvar1.Text = bvar1t;
                 }
 
 
-
-                bvar1.Text = bvar1t;
+                
 
             }
             else if (sender == bvar2)
