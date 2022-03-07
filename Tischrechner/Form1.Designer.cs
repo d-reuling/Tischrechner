@@ -78,6 +78,8 @@
             this.AutoSaveBox = new System.Windows.Forms.CheckBox();
             this.DarkModeBox = new System.Windows.Forms.CheckBox();
             this.RechnerPage = new System.Windows.Forms.TabPage();
+            this.bvar2 = new System.Windows.Forms.Button();
+            this.bvar1 = new System.Windows.Forms.Button();
             this.Uhrzeitlbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bNeg = new System.Windows.Forms.Button();
@@ -117,8 +119,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorclear = new System.Windows.Forms.Timer(this.components);
             this.rgbTimer = new System.Windows.Forms.Timer(this.components);
-            this.bvar1 = new System.Windows.Forms.Button();
-            this.bvar2 = new System.Windows.Forms.Button();
+            this.presstimeer = new System.Windows.Forms.Timer(this.components);
             this.LogsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SettingsPage.SuspendLayout();
@@ -841,6 +842,40 @@
             this.RechnerPage.TabIndex = 0;
             this.RechnerPage.Text = "calculator";
             // 
+            // bvar2
+            // 
+            this.bvar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.bvar2.FlatAppearance.BorderSize = 0;
+            this.bvar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bvar2.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bvar2.ForeColor = System.Drawing.Color.Gray;
+            this.bvar2.Location = new System.Drawing.Point(198, 303);
+            this.bvar2.Margin = new System.Windows.Forms.Padding(0);
+            this.bvar2.Name = "bvar2";
+            this.bvar2.Size = new System.Drawing.Size(84, 80);
+            this.bvar2.TabIndex = 72;
+            this.bvar2.Text = "Var2";
+            this.bvar2.UseMnemonic = false;
+            this.bvar2.UseVisualStyleBackColor = false;
+            this.bvar2.Click += new System.EventHandler(this.bvar1_Click);
+            // 
+            // bvar1
+            // 
+            this.bvar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.bvar1.FlatAppearance.BorderSize = 0;
+            this.bvar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bvar1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bvar1.ForeColor = System.Drawing.Color.Gray;
+            this.bvar1.Location = new System.Drawing.Point(198, 213);
+            this.bvar1.Margin = new System.Windows.Forms.Padding(0);
+            this.bvar1.Name = "bvar1";
+            this.bvar1.Size = new System.Drawing.Size(85, 80);
+            this.bvar1.TabIndex = 71;
+            this.bvar1.Text = "Var1";
+            this.bvar1.UseMnemonic = false;
+            this.bvar1.UseVisualStyleBackColor = false;
+            this.bvar1.Click += new System.EventHandler(this.bvar1_Click);
+            // 
             // Uhrzeitlbl
             // 
             this.Uhrzeitlbl.BackColor = System.Drawing.Color.Transparent;
@@ -1404,40 +1439,6 @@
             // 
             this.rgbTimer.Tick += new System.EventHandler(this.rgbTimer_Tick);
             // 
-            // bvar1
-            // 
-            this.bvar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
-            this.bvar1.FlatAppearance.BorderSize = 0;
-            this.bvar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bvar1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bvar1.ForeColor = System.Drawing.Color.Gray;
-            this.bvar1.Location = new System.Drawing.Point(198, 213);
-            this.bvar1.Margin = new System.Windows.Forms.Padding(0);
-            this.bvar1.Name = "bvar1";
-            this.bvar1.Size = new System.Drawing.Size(84, 80);
-            this.bvar1.TabIndex = 71;
-            this.bvar1.Text = "Var1";
-            this.bvar1.UseMnemonic = false;
-            this.bvar1.UseVisualStyleBackColor = false;
-            this.bvar1.Click += new System.EventHandler(this.bvar1_Click);
-            // 
-            // bvar2
-            // 
-            this.bvar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
-            this.bvar2.FlatAppearance.BorderSize = 0;
-            this.bvar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bvar2.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bvar2.ForeColor = System.Drawing.Color.Gray;
-            this.bvar2.Location = new System.Drawing.Point(198, 303);
-            this.bvar2.Margin = new System.Windows.Forms.Padding(0);
-            this.bvar2.Name = "bvar2";
-            this.bvar2.Size = new System.Drawing.Size(84, 80);
-            this.bvar2.TabIndex = 72;
-            this.bvar2.Text = "Var2";
-            this.bvar2.UseMnemonic = false;
-            this.bvar2.UseVisualStyleBackColor = false;
-            this.bvar2.Click += new System.EventHandler(this.bvar1_Click);
-            // 
             // Tischrechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1560,6 +1561,7 @@
         private System.Windows.Forms.TrackBar rgbBar;
         private System.Windows.Forms.Button bvar2;
         private System.Windows.Forms.Button bvar1;
+        private System.Windows.Forms.Timer presstimeer;
     }
 }
 

@@ -859,47 +859,29 @@ namespace Tischrechner
 
         private void bvar1_Click(object sender, EventArgs e)
         {
-            float currentsize = 0;
-            int varlength = 0;
+            
 
             if (sender == bvar1)
             {
                 
-
-                string bvar1t = "10000000";
-
-                
-
-                string leng = bvar1t;
-                varlength = leng.Length;
-
-                if(varlength >= 3)
-                {
-                    for (int i = varlength, i >= 2, i-2)
-                    {
-                        currentsize = bvar1.Font.SizeInPoints;
-                        currentsize -= 1;
-                        varlength -= 2;
-                    }
+                string bvar1t = Ergebnis2.Text.ToString();
 
 
-                    bvar1.Font = new Font("Calibri", currentsize);
 
-                    bvar1.Text = bvar1t;
-                }
+                bvar1.Text = bvar1t;
 
-                else
-                {
-                    bvar1.Text = bvar1t;
-                }
+               
 
-
-                
 
             }
+
             else if (sender == bvar2)
             {
-                bvar2.Text = "2";
+                string bvar2t = Ergebnis2.Text.ToString();
+
+
+
+                bvar2.Text = bvar2t;
             }
            
         }
