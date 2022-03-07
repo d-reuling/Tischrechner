@@ -12,7 +12,7 @@ namespace Tischrechner
         //TODO: Anpassen/Vereinfachen
         LinkedList<string> Zahl = new LinkedList<string>(); //Zahl LinkedList (Für PvS und OhnePvS)
         Queue<string> Operator = new Queue<string>(); //Operatoren Queue (Für PvS und OhnePvS)
-
+        //a
         public string CurDigit; //Aktuelle Zahl (Für Einfachen Modus)
         public string WhInvoice; //Gesamte Rechnung (Für Einfachen Modus)
         public string CurOperator; //Aktueller Operator (Um aufeinanderfolgende Operatoren zu vermeiden)
