@@ -97,6 +97,7 @@ namespace Tischrechner
                     Zahl.AddFirst(Erg + " ");
                     AnsWert = Erg;
                 }//lol
+                //lol2
                 else
                 if (Operator.Peek() == "÷")
                 {
