@@ -9,6 +9,9 @@ namespace Tischrechner
     class Rechnung
     {
            //TEST3
+           //TESt4
+           //TEST 5
+           //Test 6
         //TODO: Anpassen/Vereinfachen
         LinkedList<string> Zahl = new LinkedList<string>(); //Zahl LinkedList (Für PvS und OhnePvS)
         Queue<string> Operator = new Queue<string>(); //Operatoren Queue (Für PvS und OhnePvS)
