@@ -98,6 +98,7 @@ namespace Tischrechner
                     AnsWert = Erg;
                 }//lol
                 //lol2
+                //lol3
                 else
                 if (Operator.Peek() == "÷")
                 {
