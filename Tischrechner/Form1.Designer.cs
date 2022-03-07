@@ -78,6 +78,7 @@
             this.AutoSaveBox = new System.Windows.Forms.CheckBox();
             this.DarkModeBox = new System.Windows.Forms.CheckBox();
             this.RechnerPage = new System.Windows.Forms.TabPage();
+            this.bMwSt = new System.Windows.Forms.Button();
             this.Uhrzeitlbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bNeg = new System.Windows.Forms.Button();
@@ -801,8 +802,7 @@
             // RechnerPage
             // 
             this.RechnerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(46)))));
-            this.RechnerPage.Controls.Add(this.euroyuan);
-            this.RechnerPage.Controls.Add(this.B_Yuan);
+            this.RechnerPage.Controls.Add(this.bMwSt);
             this.RechnerPage.Controls.Add(this.Uhrzeitlbl);
             this.RechnerPage.Controls.Add(this.pictureBox1);
             this.RechnerPage.Controls.Add(this.bNeg);
@@ -840,6 +840,24 @@
             this.RechnerPage.Size = new System.Drawing.Size(1150, 628);
             this.RechnerPage.TabIndex = 0;
             this.RechnerPage.Text = "calculator";
+            // 
+            // bMwSt
+            // 
+            this.bMwSt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.bMwSt.FlatAppearance.BorderSize = 0;
+            this.bMwSt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bMwSt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bMwSt.ForeColor = System.Drawing.Color.Gray;
+            this.bMwSt.Location = new System.Drawing.Point(875, 213);
+            this.bMwSt.Margin = new System.Windows.Forms.Padding(0);
+            this.bMwSt.Name = "bMwSt";
+            this.bMwSt.Size = new System.Drawing.Size(84, 80);
+            this.bMwSt.TabIndex = 71;
+            this.bMwSt.Text = "MwSt";
+            this.bMwSt.UseMnemonic = false;
+            this.bMwSt.UseVisualStyleBackColor = false;
+            this.bMwSt.Visible = false;
+            this.bMwSt.Click += new System.EventHandler(this.bMwSt_Click);
             // 
             // Uhrzeitlbl
             // 
@@ -1550,8 +1568,6 @@
         private System.Windows.Forms.Label hiernichts;
         private System.Windows.Forms.Label aktfarbe;
         private System.Windows.Forms.TrackBar rgbBar;
-        private System.Windows.Forms.Label euroyuan;
-        private System.Windows.Forms.Button B_Yuan;
     }
 }
 
