@@ -21,6 +21,7 @@ namespace Tischrechner
         int g = 100; //für rgb (spielerei)
         int b = 240;
         int wo = 0;
+        bool check2; 
 
         public Tischrechner()
         {
@@ -856,21 +857,32 @@ namespace Tischrechner
                 Rechnungen.Items.Clear();
             }
         }
-        private void PfundinEuro(double Erg)
-        {
-            double wechselkurs = Erg * 0.16 * 10;
-            Erg = Convert.ToDouble( wechselkurs + "€");
-        }
 
-        private void EuroinPfund(double Erg)
-        {
-            double wechslekurs = Erg * 0.12 * 10;
-            Erg = Convert.ToDouble(wechslekurs + "€");
-        }
-
+     
         private void b_Pfund_Click(object sender, EventArgs e)
         {
-            
+          if(check2 == true)
+            {
+                Double test2 = 0;
+                string ergtest2;
+                test2 = Convert.ToDouble(Ergebnis2.Text);
+                test2 = test2 * 1.21;
+                ergtest2 = Convert.ToString(test2);
+                Ergebnis2.Text = ergtest2;
+                check2 = false;
+                b_Pfund.Text = "£";
+            }  
+          else if (check2 == false)
+            {
+                Double test2 = 0;
+                string ergtest2;
+                test2 = Convert.ToDouble(Ergebnis2.Text);
+                test2 = test2 / 1.21;
+                ergtest2 = Convert.ToString(test2);
+                Ergebnis2.Text = ergtest2;
+                check2 = true;
+                b_Pfund.Text = "€";
+            }
         }
     }
 }

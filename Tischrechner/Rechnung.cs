@@ -296,6 +296,8 @@ namespace Tischrechner
             AnsWert = Erg;
             return Erg;
         }
+
+       
         public double Rechnen()
         {
             double ReErg = 0;
@@ -340,6 +342,11 @@ namespace Tischrechner
             }
             catch { }
             return ReErg;
+
+
+
         }
+
+       
     }
 }
